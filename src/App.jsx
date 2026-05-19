@@ -74,7 +74,23 @@ Guests: ${form.guests}`
   Family trips • Pilgrimages • Business travel • Weddings • Urgent stays
 </p>
 
-        <div className="grid md:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-4 gap-4 mt-10 text-sm font-medium">
+  <div className="bg-green-50 p-4 rounded-2xl">
+    ✅ Human Assistance
+  </div>
+
+  <div className="bg-blue-50 p-4 rounded-2xl">
+    ✅ Direct Hotel Payment
+  </div>
+
+  <div className="bg-yellow-50 p-4 rounded-2xl">
+    ✅ WhatsApp Support
+  </div>
+
+  <div className="bg-purple-50 p-4 rounded-2xl">
+    ✅ Personalized Matching
+  </div>
+</div>
           <input
             name="destination"
             onChange={handleChange}
