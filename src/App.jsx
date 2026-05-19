@@ -154,20 +154,28 @@ Guests: ${form.guests}`
         </h3>
 
         <div className="max-w-4xl mx-auto space-y-4">
-          <div className="bg-white p-6 rounded-2xl shadow">
-            <strong>How does payment work?</strong>
-            <p>You pay the hotel directly.</p>
-          </div>
+         <div className="bg-white p-6 rounded-2xl shadow">
+  <strong>How does payment work?</strong>
+  <p>
+    You pay the hotel directly or through the official booking provider.
+    StaySaathi does not hold customer funds.
+  </p>
+</div>
 
-          <div className="bg-white p-6 rounded-2xl shadow">
-            <strong>Is StaySaathi a hotel?</strong>
-            <p>No, we help you find and coordinate bookings.</p>
-          </div>
+<div className="bg-white p-6 rounded-2xl shadow">
+  <strong>Is StaySaathi a hotel?</strong>
+  <p>
+    No. StaySaathi is a personal hotel booking assistance service that helps
+    travellers find suitable hotel options.
+  </p>
+</div>
 
-          <div className="bg-white p-6 rounded-2xl shadow">
-            <strong>Can I book via WhatsApp?</strong>
-            <p>Yes, that’s our primary service channel.</p>
-          </div>
+<div className="bg-white p-6 rounded-2xl shadow">
+  <strong>Can I book via WhatsApp?</strong>
+  <p>
+    Yes. WhatsApp is our fastest and preferred booking assistance channel.
+  </p>
+</div>
         </div>
       </section>
 
