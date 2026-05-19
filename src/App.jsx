@@ -105,7 +105,7 @@ Guests: ${form.guests}`
           onClick={handleWhatsApp}
           className="mt-6 bg-black text-white px-8 py-4 rounded-2xl"
         >
-          Send Enquiry on WhatsApp
+          Get Hotel Options on WhatsApp
         </button>
       </section>
 
