@@ -171,13 +171,22 @@ Guests: ${form.guests}`
         </div>
       </section>
 
-      <footer className="bg-black text-white text-center p-8">
-        <p>StaySaathi • Book as a friend</p>
-        <p className="text-sm mt-2 opacity-70">
-          StaySaathi helps customers discover and connect with hotels.
-          Payments are made directly to hotels or booking providers.
-        </p>
-      </footer>
+      <footer className="bg-black text-white text-center p-10">
+  <p className="text-xl font-semibold">StaySaathi • Book as a friend</p>
+
+  <p className="mt-4">
+    📞 +91 84509 72317 | WhatsApp Support Available
+  </p>
+
+  <p className="mt-2">
+    🕘 Assistance Hours: 9 AM – 10 PM IST
+  </p>
+
+  <p className="text-sm mt-6 opacity-70 max-w-3xl mx-auto">
+    StaySaathi helps customers discover and connect with suitable hotels.
+    Payments are made directly to hotels or booking providers.
+  </p>
+</footer>
     </div>
   )
 }
