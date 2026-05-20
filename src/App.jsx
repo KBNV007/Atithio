@@ -6,13 +6,13 @@ export default function App() {
   const [language, setLanguage] = useState('en');
   const t = (en, hi) => language === 'en' ? en : hi;
 
-  // Reliable Hero Images
+  // NEW Luxury Hero Images (Different from destinations)
   const luxuryImages = [
     "https://picsum.photos/id/1015/1600/900",
-    "https://picsum.photos/id/1016/1600/900",
     "https://picsum.photos/id/133/1600/900",
     "https://picsum.photos/id/201/1600/900",
-    "https://picsum.photos/id/251/1600/900"
+    "https://picsum.photos/id/251/1600/900",
+    "https://picsum.photos/id/367/1600/900"
   ];
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -85,7 +85,6 @@ export default function App() {
     setTimeout(() => setIsSubmitting(false), 1200);
   };
 
-  // Reliable Destination Images
   const popularDestinations = [
     { name: "Goa", emoji: "🏖️", desc: t("Beaches & Vibes", "समुद्र तट"), image: "https://picsum.photos/id/1015/800/600" },
     { name: "Jaipur", emoji: "🏰", desc: t("Royal Heritage", "शाही विरासत"), image: "https://picsum.photos/id/133/800/600" },
@@ -126,7 +125,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* Hero */}
+      {/* Hero Section - Updated Luxury Images */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <img
           src={luxuryImages[currentImage]}
@@ -225,7 +224,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Popular Destinations */}
+      {/* Popular Destinations - Unchanged */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <h3 className="text-center text-4xl font-semibold mb-4">{t("Popular Destinations", "लोकप्रिय गंतव्य")}</h3>
         <p className="text-center text-gray-600 mb-12">{t("Loved by Indian travellers", "भारतीय यात्रियों द्वारा पसंद की गई जगहें")}</p>
