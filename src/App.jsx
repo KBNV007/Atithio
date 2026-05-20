@@ -391,7 +391,7 @@ export default function App() {
               {/* Desert Card */}
               <div className="group relative h-96 rounded-3xl overflow-hidden shadow-lg cursor-pointer" onClick={handleWhatsApp}>
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent z-10 transition-opacity group-hover:opacity-100"></div>
-                <img src="https://images.unsplash.com/photo-1546995696-6b2dbf2d9dbd?auto=format&fit=crop&w=800&q=80" alt="Desert in India" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src="https://images.unsplash.com/photo-1533222481259-ce20eda1e20b?auto=format&fit=crop&w=800&q=80" alt="Desert in India" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute bottom-0 left-0 p-8 z-20">
                   <Sun className="w-8 h-8 text-orange-400 mb-3 opacity-90" />
                   <h4 className="text-3xl font-bold text-white mb-2">{t.desert}</h4>
