@@ -104,10 +104,10 @@ export default function App() {
     image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
   },
   {
-    name: "Udaipur",
+    name: "Rishikesh",
     emoji: "🪷",
-    desc: t("Lakes & Romance", "झीलें"),
-    image: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80"
+    desc: t("Yoga & Adventure", "योग और साहस"),
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
   },
   {
     name: "Kerala",
