@@ -96,17 +96,17 @@ export default function App() {
   const familyAssurances = [
     {
       icon: "🥗",
-      titleEn: "Pure Veg & Jain Dining",
-      titleHi: "शुद्ध शाकाहारी और जैन भोजन",
-      descEn: "We filter hotels with pure vegetarian kitchens or highly-rated family restaurants located right nearby.",
-      descHi: "हम ऐसे होटल चुनते हैं जहाँ शुद्ध शाकाहारी रसोई हो या पास में शुद्ध भोजन के शानदार विकल्प मौजूद हों।"
+      titleEn: "Nearby famous places and restaurants",
+      titleHi: "आसपास के प्रसिद्ध स्थान और रेस्टोरेंट",
+      descEn: "We filter hotels as per family requirement of famous places and  highly-rated family restaurants located right nearby.",
+      descHi: "हम प्रसिद्ध स्थानों और पास ही में स्थित हाई-रेटेड फैमिली रेस्टोरेंट के पास आपकी पारिवारिक आवश्यकताओं के अनुसार होटल ढूंढते हैं।"
     },
     {
       icon: "👵",
-      titleEn: "Senior Citizen Friendly",
-      titleHi: "बुजुर्गों के अनुकूल सुविधाएं",
-      descEn: "Assured lift accessibility, minimal walking distance options, and quick extra-bed setups for grandparents.",
-      descHi: "लिफ्ट की पक्की व्यवस्था, सीढ़ियों से बचाव और बुजुर्गों के आराम के लिए आसान रूम अरेंजमेंट्स।"
+      titleEn: "Children Friendly",
+      titleHi: "बच्चों के अनुकूल",
+      descEn: "We filter hotels basis children needs of open spaces to play",
+      descHi: "हम बच्चों की ज़रूरतों के हिसाब से ऐसे होटल चुनते हैं जहाँ उनके खेलने के लिए खुले और बड़े मैदान (ओपन स्पेस) हों।"
     },
     {
       icon: "👨‍👩‍👧‍👦",
@@ -216,7 +216,7 @@ export default function App() {
                   name="destination" 
                   value={form.destination} 
                   onChange={handleChange}
-                  placeholder={t("Destination (e.g. Goa, Rishikesh, Jaipur)", "गंतव्य (जैसे: गोवा, ऋषिकेश, जयपुर)")}
+                  placeholder={t("Destination (e.g. Manali, Goa, Rishikesh, Jaipur)", "गंतव्य (जैसे: मनाली, गोवा, ऋषिकेश, जयपुर)")}
                   className={`w-full border-2 focus:outline-none focus:ring-4 rounded-xl p-3.5 text-base transition-all ${validationError ? 'border-red-400 focus:ring-red-100 focus:border-red-500' : 'border-zinc-200 focus:border-amber-500 focus:ring-amber-100'}`} 
                 />
                 {validationError && (
@@ -275,7 +275,7 @@ export default function App() {
                   <span>🚀 {t("Connecting...", "कनेक्ट हो रहा है...")}</span>
                 ) : (
                   <>
-                    <span>💬 {t("Get Vetted Options on WhatsApp", "व्हाट्सएप पर बेहतरीन विकल्प प्राप्त करें")}</span>
+                    <span>💬 {t("Get best prices Options on WhatsApp", "व्हाट्सएप पर बेहतरीन विकल्प प्राप्त करें")}</span>
                   </>
                 )}
               </button>
@@ -352,7 +352,7 @@ export default function App() {
           <div className="bg-white border border-zinc-100 p-6 rounded-2xl shadow-sm text-center flex flex-col items-center">
             <div className="w-12 h-12 bg-amber-50 rounded-xl flex items-center justify-center text-2xl mb-4">📞</div>
             <h4 className="text-lg font-bold text-zinc-800 mb-1">{t("9 AM - 7 PM Active Support", "9 AM से 7 PM पक्की सहायता")}</h4>
-            <p className="text-sm text-zinc-500 max-w-xs">{t("Our dedicated curators are available daily from 9:00 AM to 7:00 PM to handle all edits and requests.", "हमारे विशेषज्ञ सुबह 9 से शाम 7 बजे तक आपके चेक-इन, बदलावों और हर जरूरत के लिए फोन/व्हाट्सएप पर उपलब्ध हैं।")}</p>
+            <p className="text-sm text-zinc-500 max-w-xs">{t("We are available daily from 9:00 AM to 7:00 PM to handle all requests.", "हम आपकी सभी ज़रूरतों और बुकिंग के लिए रोज़ाना सुबह 9:00 बजे से शाम 7:00 बजे तक उपलब्ध हैं।")}</p>
           </div>
         </div>
       </section>
@@ -404,7 +404,7 @@ export default function App() {
 
             <div className="bg-white p-6 rounded-2xl shadow-sm relative border border-zinc-200/40">
               <span className="absolute -top-5 left-6 bg-gradient-to-br from-amber-500 to-yellow-600 text-white w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg shadow-md">2</span>
-              <div className="text-amber-600 font-bold text-xs uppercase tracking-wider mb-2 mt-2">{t("WITHIN 29 MINUTES", "29 मिनट के भीतर")}</div>
+              <div className="text-amber-600 font-bold text-xs uppercase tracking-wider mb-2 mt-2">{t("WITHIN 2 HOURS", "2 घंटे के भीतर")}</div>
               <h4 className="text-lg font-bold text-zinc-800 mb-2">{t("Receive Custom Options", "होटल विकल्प पाएं")}</h4>
               <p className="text-sm text-zinc-500 leading-relaxed">{t("Our destination helper filters clean local properties and delivers 3 best tailored hotel choices to your chat.", "हमारे लोकल एक्सपर्ट सबसे सुरक्षित और बेहतरीन 3 विकल्प आपके व्हाट्सएप पर भेजेंगे।")}</p>
             </div>
