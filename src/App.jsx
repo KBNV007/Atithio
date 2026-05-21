@@ -85,13 +85,43 @@ export default function App() {
   };
 
   const popularDestinations = [
-    { name: "Goa", emoji: "🏖️", desc: t("Beaches & Vibes", "समुद्र तट"), image: "https://picsum.photos/id/1015/800/600" },
-    { name: "Jaipur", emoji: "🏰", desc: t("Royal Heritage", "शाही विरासत"), image: "https://picsum.photos/id/133/800/600" },
-    { name: "Manali", emoji: "🏔️", desc: t("Mountains", "पहाड़"), image: "https://picsum.photos/id/1016/800/600" },
-    { name: "Udaipur", emoji: "🪷", desc: t("Lakes & Romance", "झीलें"), image: "https://picsum.photos/id/201/800/600" },
-    { name: "Kerala", emoji: "🌴", desc: t("Backwaters", "बैकवाटर"), image: "https://picsum.photos/id/251/800/600" },
-    { name: "Leh Ladakh", emoji: "⛰️", desc: t("Adventure", "साहस"), image: "https://picsum.photos/id/367/800/600" },
-  ];
+    {
+    name: "Goa",
+    emoji: "🏖️",
+    desc: t("Beaches & Vibes", "समुद्र तट"),
+    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Jaipur",
+    emoji: "🏰",
+    desc: t("Royal Heritage", "शाही विरासत"),
+    image: "https://images.unsplash.com/photo-1599661046827-dacde6976548?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Manali",
+    emoji: "🏔️",
+    desc: t("Mountains", "पहाड़"),
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Udaipur",
+    emoji: "🪷",
+    desc: t("Lakes & Romance", "झीलें"),
+    image: "https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Kerala",
+    emoji: "🌴",
+    desc: t("Backwaters", "बैकवाटर"),
+    image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    name: "Leh Ladakh",
+    emoji: "⛰️",
+    desc: t("Adventure", "साहस"),
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
+  }
+];
 
   return (
     <div className="min-h-screen bg-zinc-50 text-gray-900">
