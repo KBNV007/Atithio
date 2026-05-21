@@ -89,7 +89,7 @@ export default function App() {
     name: "Goa",
     emoji: "🏖️",
     desc: t("Beaches & Vibes", "समुद्र तट"),
-    image: "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=800&q=80"
   },
   {
     name: "Jaipur",
