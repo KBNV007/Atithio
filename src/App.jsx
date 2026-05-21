@@ -293,7 +293,7 @@ export default function App() {
             <div className="w-8 h-8 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center text-white font-bold">S</div>
             <span className="text-3xl font-serif">StaySaathi</span>
           </div>
-          <p className="opacity-75">Assistance Hours: 9 AM – 9 PM IST</p>
+          <p className="opacity-75">Assistance Hours: 9 AM – 7 PM IST</p>
           <p className="text-sm opacity-60 mt-8">
             Curated & Personalized Hotel Assistance • Pay Directly to Property
           </p>
