@@ -107,7 +107,7 @@ export default function App() {
     name: "Rishikesh",
     emoji: "🪷",
     desc: t("Yoga & Adventure", "योग और साहस"),
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
+    image: "https://images.unsplash.com/photo-1603867106100-0d2039fc8757?auto=format&fit=crop&q=80&w=800"
   },
   {
     name: "Kerala",
