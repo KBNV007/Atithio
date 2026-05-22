@@ -250,15 +250,24 @@ export default function App() {
       </section>
 
       {/* Booking Form + Stay Type & Amenities Filters */}
+      {}
       <section id="booking-form" className="max-w-6xl mx-auto px-4 md:px-6 -mt-36 relative z-20 mb-20">
         <div className="bg-white rounded-3xl shadow-2xl border border-zinc-100 overflow-hidden">
-          <div className="grid lg:grid-cols-12">
-            
+          <div className="p-6 md:p-10 border-b border-zinc-100 bg-amber-50/50">
+            <h3 className="text-2xl md:text-3xl font-serif font-bold text-zinc-800">
+              {t("Plan Your Perfect Vacation", "अपनी मनपसंद छुट्टी की योजना बनाएं")}
+            </h3>
+            <p className="text-sm text-zinc-500 mt-1">
+              {t("Fill in your requirements and customize your stay preferences below.", "नीचे अपनी जरूरतें भरें और रहने की पसंदीदा सुविधाओं को चुनें।")}
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-12 gap-y-8">
             {/* Form Side */}
-            <div className="p-6 md:p-10 lg:col-span-7 border-b lg:border-b-0 lg:border-r border-zinc-100">
-              <h3 className="text-2xl md:text-3xl font-serif font-bold mb-6 text-zinc-800">
-                {t("Tell us your requirements", "अपनी जरूरतें बताएं")}
-              </h3>
+            <div className="p-6 md:p-10 lg:col-span-7 lg:border-r border-zinc-100">
+              <h4 className="text-lg font-bold text-zinc-800 mb-5 pb-2 border-b border-zinc-100">
+                📍 {t("1. Basic Details", "1. मुख्य विवरण")}
+              </h4>
               
               <div className="mb-5">
                 <label className="block text-sm font-semibold text-zinc-600 mb-1.5">{t("Where do you want to go?", "आप कहाँ जाना चाहते हैं?")}</label>
@@ -325,31 +334,15 @@ export default function App() {
                   </div>
                 </div>
               )}
-
-              <button
-                onClick={handleWhatsApp}
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 text-white py-4 px-6 rounded-xl text-lg font-bold hover:opacity-95 transition-all shadow-xl shadow-amber-600/20 disabled:opacity-70 flex items-center justify-center gap-2"
-              >
-                {isSubmitting ? (
-                  <span>🚀 {t("Connecting...", "कनेक्ट हो रहा है...")}</span>
-                ) : (
-                  <>
-                    <span>💬 {t("Get best prices Options on WhatsApp", "व्हाट्सएप पर बेहतरीन विकल्प प्राप्त करें")}</span>
-                  </>
-                )}
-              </button>
             </div>
 
-            {}
             {/* Preferred Amenities & Filters Side */}
-            <div className="p-6 md:p-10 lg:col-span-5 bg-gradient-to-b from-zinc-50 to-zinc-100 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+            {}
+            <div className="p-6 md:p-10 lg:col-span-5 bg-gradient-to-b from-zinc-50 to-zinc-100 flex flex-col justify-between">
               <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">🏨</span>
-                  <h4 className="font-serif font-bold text-xl text-zinc-800">{t("Stay & Room Preferences", "रहने का प्रकार और सुविधाएं")}</h4>
-                </div>
-                <p className="text-xs text-zinc-500 mb-6">{t("Select your preferred styles. We will compile and search exact matches.", "अपनी पसंद चुनें। हम सटीक परिणाम ढूंढकर व्हाट्सएप पर सांझा करेंगे।")}</p>
+                <h4 className="text-lg font-bold text-zinc-800 mb-5 pb-2 border-b border-zinc-200">
+                  ⭐ {t("2. Stay & Room Preferences", "2. रहने का प्रकार और सुविधाएं")}
+                </h4>
 
                 {/* Preferred Stay Types Group */}
                 <div className="mb-5">
@@ -529,12 +522,34 @@ export default function App() {
                 </div>
 
               </div>
-
-              <div className="mt-5 pt-3 border-t border-zinc-200 text-[10px] text-zinc-500 font-medium italic leading-relaxed">
-                💡 {t("Selected choices will compile instantly and get shared on WhatsApp automatically with our booking experts.", "चुनी गई पसंदीदा सुविधाएं अपने आप आपके व्हाट्सएप संदेश में जुड़ जाएंगी ताकि हमारे एक्सपर्ट सही होटल ढूंढ सकें।")}
-              </div>
             </div>
+          </div>
 
+          {/* Unified Submission Footer */}
+          {}
+          <div className="bg-zinc-50 border-t border-zinc-100 p-6 md:p-8 flex flex-col items-center justify-center text-center">
+            <button
+              onClick={handleWhatsApp}
+              disabled={isSubmitting}
+              className="w-full max-w-2xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-600 text-white py-4 px-8 rounded-2xl text-lg md:text-xl font-bold hover:opacity-95 active:scale-95 transition-all shadow-xl shadow-amber-600/30 disabled:opacity-70 flex items-center justify-center gap-3"
+            >
+              {isSubmitting ? (
+                <>
+                  <span className="animate-spin rounded-full h-5 w-5 border-2 border-white border-t-transparent"></span>
+                  <span>{t("Connecting...", "कनेक्ट हो रहा है...")}</span>
+                </>
+              ) : (
+                <>
+                  <svg className="w-6 h-6 fill-current animate-bounce" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.413 9.863-9.847.001-2.633-1.025-5.101-2.89-6.968-1.866-1.867-4.348-2.895-6.983-2.896-5.442 0-9.866 4.415-9.869 9.85-.001 1.77.461 3.497 1.338 5.025l-.995 3.634 3.711-.969zm11.378-6.13c-.27-.135-1.595-.786-1.842-.876-.246-.09-.427-.135-.607.135-.18.27-.697.876-.855 1.057-.157.18-.315.202-.585.067-1.144-.572-1.928-1.008-2.693-2.316-.201-.343.201-.318.574-1.06.09-.18.045-.337-.022-.472-.067-.135-.607-1.462-.832-2.003-.219-.527-.441-.455-.607-.464-.157-.008-.337-.009-.517-.009s-.472.067-.719.337c-.247.27-.944.922-.944 2.25s.966 2.61 1.101 2.79c.135.18 1.902 2.904 4.607 4.067.643.277 1.145.443 1.535.566.646.205 1.234.176 1.7.106.52-.078 1.595-.652 1.82-1.282.225-.63.225-1.17.157-1.282-.067-.113-.247-.18-.517-.315z"/>
+                  </svg>
+                  <span>{t("Submit to get best options on WhatsApp", "व्हाट्सएप पर बेहतरीन विकल्प पाने के लिए सबमिट करें")}</span>
+                </>
+              )}
+            </button>
+            <p className="mt-3 text-xs text-zinc-500 font-medium">
+              💡 {t("No middleman fees • Your selections will instantly compile into a WhatsApp draft message.", "कोई बिचौलिया शुल्क नहीं • आपकी चुनी गई पसंदीदा सुविधाएं अपने आप व्हाट्सएप संदेश में जुड़ जाएंगी।")}
+            </p>
           </div>
         </div>
       </section>
@@ -560,7 +575,6 @@ export default function App() {
         </div>
       </section>
 
-      {}
       {/* Family-First Assurances (Highly Appreciated in Tier 2 / Tier 3) */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 mb-24">
         <div className="bg-amber-50/60 rounded-3xl border border-amber-200/50 p-8 md:p-12">
@@ -655,8 +669,8 @@ export default function App() {
         </div>
       </section>
 
-      {}
       {/* Why Us Section */}
+      {}
       <section className="bg-gradient-to-b from-zinc-50 to-zinc-100 border-t border-zinc-200 py-20 px-4 md:px-6 mb-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -714,7 +728,6 @@ export default function App() {
         </div>
       </section>
 
-      {}
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-4 md:px-6 py-12 mb-16">
         <h3 className="text-3xl md:text-4xl font-serif font-bold text-center mb-10 text-zinc-800">{t("Frequently Asked Questions", "अक्सर पूछे जाने वाले सवाल")}</h3>
@@ -734,7 +747,6 @@ export default function App() {
         </div>
       </section>
 
-      {}
       {/* Footer */}
       <footer className="bg-zinc-900 text-zinc-100 py-12 px-4 md:px-6 border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto text-center">
