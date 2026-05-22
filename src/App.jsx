@@ -25,7 +25,28 @@ export default function App() {
     adults: 2,
     children: 0,
     childAges: [],
-    budgetPerDay: 8000, 
+    budgetPerDay: '8000', 
+  });
+
+  const [filters, setFilters] = useState({
+    hotel: false,
+    resort: false,
+    homestay: false,
+    hostel: false,
+    // Essential Amenities
+    parking: false,
+    kidsPlay: false,
+    pool: false,
+    wifi: false,
+    // Room Types
+    doubleRoom: false,
+    familyRoom: false,
+    balcony: false,
+    bathtub: false,
+    petsAllowed: false,
+    bunkBed: false,
+    // Meal Plan selection
+    mealPlan: '', // 'breakfast', 'halfBoard' (B+L/D), 'fullBoard' (B+L+D)
   });
 
   useEffect(() => {
@@ -40,8 +61,12 @@ export default function App() {
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSliderChange = (e) => {
-    setForm(prev => ({ ...prev, budgetPerDay: parseInt(e.target.value) || 4000 }));
+  const handleFilterToggle = (key) => {
+    setFilters(prev => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const handleMealPlanToggle = (plan) => {
+    setFilters(prev => ({ ...prev, mealPlan: prev.mealPlan === plan ? '' : plan }));
   };
 
   const handleAdultsChildren = (type, value) => {
@@ -79,30 +104,77 @@ export default function App() {
       ? `Children: ${form.children} (${form.childAges.join(', ')} yrs)` 
       : 'No children';
 
+    // Compile Stay Types including Hostels
+    const selectedStayTypes = [];
+    if (filters.hotel) selectedStayTypes.push("Hotel / होटल");
+    if (filters.resort) selectedStayTypes.push("Resort / रिसॉर्ट");
+    if (filters.homestay) selectedStayTypes.push("Homestay / होमस्टे");
+    if (filters.hostel) selectedStayTypes.push("Hostel / हॉस्टल");
+    const stayTypesText = selectedStayTypes.length > 0 
+      ? `\n🏠 *Stay Type:* ${selectedStayTypes.join(', ')}` 
+      : '';
+
+    // Compile Essential Amenities
+    const selectedAmenities = [];
+    if (filters.parking) selectedAmenities.push("🚗 Safe Parking / सुरक्षित पार्किंग");
+    if (filters.kidsPlay) selectedAmenities.push("🧸 Kids Play Area / खेलने की जगह");
+    if (filters.pool) selectedAmenities.push("🏊‍♂️ Swimming Pool / स्विमिंग पूल");
+    if (filters.wifi) selectedAmenities.push("📶 Free High-speed Wi-Fi / हाई-स्पीड वाई-फाई");
+    const amenitiesText = selectedAmenities.length > 0 
+      ? `\n⭐ *Amenities:* \n${selectedAmenities.map(item => `- ${item}`).join('\n')}` 
+      : '';
+
+    // Compile Room Types
+    const selectedRoomTypes = [];
+    if (filters.doubleRoom) selectedRoomTypes.push("Double Room / डबल रूम");
+    if (filters.familyRoom) selectedRoomTypes.push("Family Room / फैमिली रूम");
+    if (filters.balcony) selectedRoomTypes.push("Balcony / बालकनी");
+    if (filters.bathtub) selectedRoomTypes.push("Bathtub / बाथटब");
+    if (filters.petsAllowed) selectedRoomTypes.push("Pets Allowed / पेट्स अनुकूल");
+    if (filters.bunkBed) selectedRoomTypes.push("Bunk Bed / बंक बेड");
+    const roomTypesText = selectedRoomTypes.length > 0 
+      ? `\n🛏️ *Room Preferences:* ${selectedRoomTypes.join(', ')}` 
+      : '';
+
+    // Compile Meal Plans
+    let mealPlanText = '';
+    if (filters.mealPlan === 'breakfast') {
+      mealPlanText = `\n🍳 *Meal Preference:* Including Breakfast / नाश्ता शामिल`;
+    } else if (filters.mealPlan === 'halfBoard') {
+      mealPlanText = `\n🍛 *Meal Preference:* Breakfast + Lunch/Dinner / नाश्ता + दोपहर/रात का भोजन`;
+    } else if (filters.mealPlan === 'fullBoard') {
+      mealPlanText = `\n🍲 *Meal Preference:* Breakfast + Lunch + Dinner / तीनों समय का भोजन`;
+    }
+
+    const budgetFormatted = form.budgetPerDay === '20000' ? '₹15,000+' : `₹${form.budgetPerDay}`;
+
     const msg = `*Premium Hotel Enquiry - StaySaathi*\n\n` +
       `📍 Destination: ${form.destination}\n` +
       `📅 From: ${form.fromDate || 'Flexible'}\n` +
       `📅 Till: ${form.toDate || 'Flexible'}\n` +
       `👨‍👩‍👧 Adults: ${form.adults}\n` +
       `👦 ${childInfo}\n` +
-      `💰 Budget: ₹${form.budgetPerDay} per room/day\n\n` +
-      `Please suggest the best matching premium options.`;
+      `💰 Budget: ${budgetFormatted} per room/day` +
+      `${stayTypesText}` +
+      `${amenitiesText}` +
+      `${roomTypesText}` +
+      `${mealPlanText}\n\n` +
+      `Please suggest the best matching options.`;
 
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
     setTimeout(() => setIsSubmitting(false), 1200);
   };
 
-  // Tier-2 & Tier-3 Friendly Core Assurances
   const familyAssurances = [
     {
       icon: "🥗",
       titleEn: "Nearby famous places and restaurants",
       titleHi: "आसपास के प्रसिद्ध स्थान और रेस्टोरेंट",
-      descEn: "We filter hotels as per family requirement of famous places and  highly-rated family restaurants located right nearby.",
+      descEn: "We filter hotels as per family requirement of famous places and highly-rated family restaurants located right nearby.",
       descHi: "हम प्रसिद्ध स्थानों और पास ही में स्थित हाई-रेटेड फैमिली रेस्टोरेंट के पास आपकी पारिवारिक आवश्यकताओं के अनुसार होटल ढूंढते हैं।"
     },
     {
-      icon: "👵",
+      icon: "🧸",
       titleEn: "Children Friendly",
       titleHi: "बच्चों के अनुकूल",
       descEn: "We filter hotels basis children needs of open spaces to play",
@@ -116,28 +188,6 @@ export default function App() {
       descHi: "बड़े परिवारों के लिए एक साथ पास-पास कमरे, उत्सवों के लिए विशेष कस्टमाइज़्ड ग्रुप रेट्स।"
     }
   ];
-
-  // Dynamic Perks Engine
-  const getPerksByBudget = (budget) => {
-    if (budget < 6000) {
-      return {
-        tier: t("Boutique Premium Stay", "प्रीमियम बजट स्टे"),
-        perks: [t("3★/4★ Family Vetted Properties", "परिवार के लिए जांची-परखी 3★/4★ होटल"), t("Complimentary Hot Breakfast", "गर्म और स्वादिष्ट मुफ़्त नाश्ता"), t("Highly Clean & Safe Bathrooms", "साफ-सुथरे और सुरक्षित वॉशरूम्स")]
-      };
-    } else if (budget < 12000) {
-      return {
-        tier: t("Elite Premium Resort", "प्रीमियम फैमिली रिसॉर्ट"),
-        perks: [t("High-rated 4★ / 5★ Resorts", "शानदार 4★ / 5★ रिसॉर्ट्स और होटल्स"), t("Free Room Upgrade (Subject to vacancy)", "कमरे के अपग्रेड होने की पूरी संभावना"), t("Early Check-in Priority for Families", "परिवारों के लिए जल्दी चेक-इन प्राथमिकता"), t("Direct Assistant Support", "समर्पित साथी फोन गाइड सहायता")]
-      };
-    } else {
-      return {
-        tier: t("Ultra-Luxury & Palaces", "अति-लग्जरी और पैलेस"),
-        perks: [t("Iconic 5★ Luxury Brands & Villas", "मशहूर 5★ लग्जरी ब्रांड्स और राजसी विला"), t("Private Plunge Pool / Infinity Pool Access", "प्राइवेट पूल और बच्चों के अनुकूल वॉटर प्ले एरिया"), t("Curated Fresh Meals Included", "ताजा और कस्टमाइज़्ड भोजन व्यवस्था शामिल"), t("VIP Welcome & Luggage Handling", "वीआईपी सत्कार और सामान ले जाने की खास सुविधा")]
-      };
-    }
-  };
-
-  const currentPerkPackage = getPerksByBudget(form.budgetPerDay);
 
   const popularDestinations = [
     { name: "Goa", emoji: "🏖️", desc: t("Beaches & Vibes", "समुद्र तट और मस्ती"), image: "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&w=800&q=80" },
@@ -199,7 +249,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* Booking Form + Perks Estimator */}
+      {/* Booking Form + Stay Type & Amenities Filters */}
       <section id="booking-form" className="max-w-6xl mx-auto px-4 md:px-6 -mt-36 relative z-20 mb-20">
         <div className="bg-white rounded-3xl shadow-2xl border border-zinc-100 overflow-hidden">
           <div className="grid lg:grid-cols-12">
@@ -237,7 +287,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-2 gap-4 mb-5">
                 <div>
                   <label className="block text-sm font-semibold text-zinc-600 mb-1.5">{t("Adults (12+ yrs)", "वयस्क")}</label>
                   <select value={form.adults} onChange={(e) => handleAdultsChildren('adults', e.target.value)} className="w-full border-2 border-zinc-200 focus:border-amber-500 focus:outline-none rounded-xl p-3.5 bg-white text-zinc-700">
@@ -251,6 +301,16 @@ export default function App() {
                     {[0,1,2,3,4].map(n => <option key={n} value={n}>{n}</option>)}
                   </select>
                 </div>
+              </div>
+
+              <div className="mb-6">
+                <label className="block text-sm font-semibold text-zinc-600 mb-1.5">{t("Budget per room / day", "प्रति कमरा / रात का बजट")}</label>
+                <select name="budgetPerDay" value={form.budgetPerDay} onChange={handleChange} className="w-full border-2 border-zinc-200 focus:border-amber-500 focus:outline-none rounded-xl p-3.5 bg-white text-zinc-700">
+                  <option value="4000">₹2,000 - ₹4,000 ({t("Budget Standard", "बजट होटल")})</option>
+                  <option value="8000">₹4,000 - ₹8,000 ({t("Family Standard Premium", "प्रीमियम फैमिली स्टे")})</option>
+                  <option value="12000">₹8,000 - ₹15,000 ({t("Luxury Resort", "शानदार लग्जरी रिसॉर्ट")})</option>
+                  <option value="20000">₹15,000+ ({t("Ultra-Luxury/Villas", "अति-लग्जरी पैलेस / विला")})</option>
+                </select>
               </div>
 
               {form.children > 0 && (
@@ -281,54 +341,197 @@ export default function App() {
               </button>
             </div>
 
-            {/* Interactive Budget Perks Estimator Side */}
-            <div className="p-6 md:p-10 lg:col-span-5 bg-gradient-to-b from-zinc-50 to-zinc-100 flex flex-col justify-between">
+            {}
+            {/* Preferred Amenities & Filters Side */}
+            <div className="p-6 md:p-10 lg:col-span-5 bg-gradient-to-b from-zinc-50 to-zinc-100 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl">💰</span>
-                  <h4 className="font-serif font-bold text-xl text-zinc-800">{t("Live hotel style Matcher", "लाइव होटल सुविधा मैचर")}</h4>
+                  <span className="text-xl">🏨</span>
+                  <h4 className="font-serif font-bold text-xl text-zinc-800">{t("Stay & Room Preferences", "रहने का प्रकार और सुविधाएं")}</h4>
                 </div>
-                <p className="text-sm text-zinc-500 mb-6">{t("Slide to set your target budget per day to preview custom hotel privileges.", "सुविधाओं को देखने के लिए अपना दैनिक बजट आगे-पीछे स्लाइड करें।")}</p>
+                <p className="text-xs text-zinc-500 mb-6">{t("Select your preferred styles. We will compile and search exact matches.", "अपनी पसंद चुनें। हम सटीक परिणाम ढूंढकर व्हाट्सएप पर सांझा करेंगे।")}</p>
 
-                <div className="mb-6 bg-white p-4 rounded-2xl border border-zinc-200 shadow-sm">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-xs font-bold uppercase tracking-wider text-zinc-400">{t("BUDGET PER ROOM / NIGHT", "प्रति कमरा / रात का बजट")}</span>
-                    <span className="text-2xl font-black text-amber-600">₹{form.budgetPerDay.toLocaleString('en-IN')}</span>
-                  </div>
-                  <input 
-                    type="range" 
-                    min="2000" 
-                    max="15000" 
-                    step="500"
-                    value={form.budgetPerDay} 
-                    onChange={handleSliderChange} 
-                    className="w-full accent-amber-500 cursor-pointer h-2 bg-zinc-100 rounded-lg appearance-none"
-                  />
-                  <div className="flex justify-between text-[10px] font-bold text-zinc-400 mt-2">
-                    <span>₹2,000</span>
-                    <span>₹8,000</span>
-                    <span>₹15,000+</span>
+                {/* Preferred Stay Types Group */}
+                <div className="mb-5">
+                  <h5 className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2.5">{t("Preferred Stay Type", "रहने का पसंदीदा प्रकार")}</h5>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => handleFilterToggle('hotel')}
+                      className={`py-2 px-1 text-xs font-semibold rounded-xl border-2 transition-all ${filters.hotel ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      🏨 {t("Hotels", "होटल्स")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('resort')}
+                      className={`py-2 px-1 text-xs font-semibold rounded-xl border-2 transition-all ${filters.resort ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      🏖️ {t("Resorts", "रिसॉर्ट्स")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('homestay')}
+                      className={`py-2 px-1 text-xs font-semibold rounded-xl border-2 transition-all ${filters.homestay ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      🏡 {t("Homestays", "होमस्टे")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('hostel')}
+                      className={`py-2 px-1 text-xs font-semibold rounded-xl border-2 transition-all ${filters.hostel ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      🎒 {t("Hostels", "हॉस्टल्स")}
+                    </button>
                   </div>
                 </div>
 
-                <div className="space-y-3">
-                  <div className="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full font-bold text-xs uppercase tracking-wide">
-                    ✨ {currentPerkPackage.tier}
+                {/* Essential Amenities List */}
+                <div className="mb-5">
+                  <h5 className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2">{t("Essential Amenities", "आवश्यक सुविधाएं")}</h5>
+                  
+                  <div className="space-y-2">
+                    {/* Safe Parking Option */}
+                    <label 
+                      onClick={() => handleFilterToggle('parking')}
+                      className={`flex items-center justify-between p-2.5 rounded-xl border-2 cursor-pointer transition-all ${filters.parking ? 'bg-amber-50/70 border-amber-500' : 'bg-white border-zinc-200 hover:border-zinc-300'}`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-lg">🚗</span>
+                        <div>
+                          <span className="block text-xs font-semibold text-zinc-800">{t("Safe Parking Available", "सुरक्षित पार्किंग व्यवस्था")}</span>
+                          <span className="block text-[9px] text-zinc-500">{t("Protected parking spot for your car", "आपकी गाड़ी के लिए सुरक्षित पार्किंग स्थान")}</span>
+                        </div>
+                      </div>
+                      <div className={`w-3.5 h-3.5 rounded border flex items-center justify-center ${filters.parking ? 'border-amber-500 bg-amber-500 text-white' : 'border-zinc-300'}`}>
+                        {filters.parking && <span className="text-[8px] font-bold">✓</span>}
+                      </div>
+                    </label>
+
+                    {/* Kids Play Area Option */}
+                    <label 
+                      onClick={() => handleFilterToggle('kidsPlay')}
+                      className={`flex items-center justify-between p-2.5 rounded-xl border-2 cursor-pointer transition-all ${filters.kidsPlay ? 'bg-amber-50/70 border-amber-500' : 'bg-white border-zinc-200 hover:border-zinc-300'}`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-lg">🧸</span>
+                        <div>
+                          <span className="block text-xs font-semibold text-zinc-800">{t("Kids Play Area / Garden", "बच्चों के खेलने की खुली जगह")}</span>
+                          <span className="block text-[9px] text-zinc-500">{t("Safe lawn and recreation for toddlers", "बच्चों के लिए पार्क व खेलने की सुरक्षित जगह")}</span>
+                        </div>
+                      </div>
+                      <div className={`w-3.5 h-3.5 rounded border flex items-center justify-center ${filters.kidsPlay ? 'border-amber-500 bg-amber-500 text-white' : 'border-zinc-300'}`}>
+                        {filters.kidsPlay && <span className="text-[8px] font-bold">✓</span>}
+                      </div>
+                    </label>
+
+                    {/* Swimming Pool Option */}
+                    <label 
+                      onClick={() => handleFilterToggle('pool')}
+                      className={`flex items-center justify-between p-2.5 rounded-xl border-2 cursor-pointer transition-all ${filters.pool ? 'bg-amber-50/70 border-amber-500' : 'bg-white border-zinc-200 hover:border-zinc-300'}`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-lg">🏊‍♂️</span>
+                        <div>
+                          <span className="block text-xs font-semibold text-zinc-800">{t("Swimming Pool Access", "स्विमिंग पूल की सुविधा")}</span>
+                          <span className="block text-[9px] text-zinc-500">{t("Clean active swimming pool on property", "होटल परिसर में स्वच्छ और सुंदर स्विमिंग पूल")}</span>
+                        </div>
+                      </div>
+                      <div className={`w-3.5 h-3.5 rounded border flex items-center justify-center ${filters.pool ? 'border-amber-500 bg-amber-500 text-white' : 'border-zinc-300'}`}>
+                        {filters.pool && <span className="text-[8px] font-bold">✓</span>}
+                      </div>
+                    </label>
+
+                    {/* Wifi / Internet Option */}
+                    <label 
+                      onClick={() => handleFilterToggle('wifi')}
+                      className={`flex items-center justify-between p-2.5 rounded-xl border-2 cursor-pointer transition-all ${filters.wifi ? 'bg-amber-50/70 border-amber-500' : 'bg-white border-zinc-200 hover:border-zinc-300'}`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <span className="text-lg">📶</span>
+                        <div>
+                          <span className="block text-xs font-semibold text-zinc-800">{t("Free High-speed Wi-Fi", "मुफ़्त हाई-स्पीड वाई-फाई")}</span>
+                          <span className="block text-[9px] text-zinc-500">{t("Fast internet connection across rooms", "कमरों और परिसर में तेज़ इंटरनेट की सुविधा")}</span>
+                        </div>
+                      </div>
+                      <div className={`w-3.5 h-3.5 rounded border flex items-center justify-center ${filters.wifi ? 'border-amber-500 bg-amber-500 text-white' : 'border-zinc-300'}`}>
+                        {filters.wifi && <span className="text-[8px] font-bold">✓</span>}
+                      </div>
+                    </label>
                   </div>
-                  <h5 className="text-sm font-bold text-zinc-700 pt-2">{t("Inclusions You Can Expect:", "अपेक्षित शामिल सुविधाएं:")}</h5>
-                  <ul className="space-y-2.5">
-                    {currentPerkPackage.perks.map((perk, index) => (
-                      <li key={index} className="flex items-start gap-2.5 text-zinc-600 text-sm font-medium">
-                        <span className="text-emerald-500 mt-0.5">✓</span>
-                        <span>{perk}</span>
-                      </li>
-                    ))}
-                  </ul>
                 </div>
+
+                {/* Room Amenities Section */}
+                <div className="mb-5">
+                  <h5 className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2">{t("Room Amenities & Vibe", "कमरे की सुख-सुविधाएं")}</h5>
+                  <div className="grid grid-cols-2 gap-2">
+                    <button
+                      onClick={() => handleFilterToggle('doubleRoom')}
+                      className={`py-2 px-1 text-[11px] font-semibold rounded-xl border-2 transition-all flex items-center justify-center gap-1.5 ${filters.doubleRoom ? 'bg-amber-100 border-amber-500 text-amber-800' : 'bg-white border-zinc-200 text-zinc-600'}`}
+                    >
+                      🛏️ {t("Double Room", "डबल रूम")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('familyRoom')}
+                      className={`py-2 px-1 text-[11px] font-semibold rounded-xl border-2 transition-all flex items-center justify-center gap-1.5 ${filters.familyRoom ? 'bg-amber-100 border-amber-500 text-amber-800' : 'bg-white border-zinc-200 text-zinc-600'}`}
+                    >
+                      👨‍👩‍👧‍👦 {t("Family Room", "फैमिली रूम")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('balcony')}
+                      className={`py-2 px-1 text-[11px] font-semibold rounded-xl border-2 transition-all flex items-center justify-center gap-1.5 ${filters.balcony ? 'bg-amber-100 border-amber-500 text-amber-800' : 'bg-white border-zinc-200 text-zinc-600'}`}
+                    >
+                      🌅 {t("Balcony View", "बालकनी")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('bathtub')}
+                      className={`py-2 px-1 text-[11px] font-semibold rounded-xl border-2 transition-all flex items-center justify-center gap-1.5 ${filters.bathtub ? 'bg-amber-100 border-amber-500 text-amber-800' : 'bg-white border-zinc-200 text-zinc-600'}`}
+                    >
+                      🛁 {t("Bathtub", "बाथटब")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('petsAllowed')}
+                      className={`py-2 px-1 text-[11px] font-semibold rounded-xl border-2 transition-all flex items-center justify-center gap-1.5 ${filters.petsAllowed ? 'bg-amber-100 border-amber-500 text-amber-800' : 'bg-white border-zinc-200 text-zinc-600'}`}
+                    >
+                      🐾 {t("Pets Allowed", "पेट्स अनुकूल")}
+                    </button>
+                    <button
+                      onClick={() => handleFilterToggle('bunkBed')}
+                      className={`py-2 px-1 text-[11px] font-semibold rounded-xl border-2 transition-all flex items-center justify-center gap-1.5 ${filters.bunkBed ? 'bg-amber-100 border-amber-500 text-amber-800' : 'bg-white border-zinc-200 text-zinc-600'}`}
+                    >
+                      🛏️ {t("Bunk Bed", "बंक बेड")}
+                    </button>
+                  </div>
+                </div>
+
+                {/* Board / Meal Plan selection */}
+                <div>
+                  <h5 className="text-[10px] font-bold uppercase tracking-wider text-zinc-400 mb-2">{t("Meal Preferences (Board Plans)", "भोजन की प्राथमिकताएं")}</h5>
+                  <div className="space-y-2">
+                    <button
+                      onClick={() => handleMealPlanToggle('breakfast')}
+                      className={`w-full text-left p-2.5 rounded-xl border-2 text-xs font-semibold flex items-center justify-between transition-all ${filters.mealPlan === 'breakfast' ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      <span className="flex items-center gap-2">🍳 {t("Including Breakfast", "नाश्ता शामिल")}</span>
+                      {filters.mealPlan === 'breakfast' && <span className="text-amber-600 font-bold">✓</span>}
+                    </button>
+                    <button
+                      onClick={() => handleMealPlanToggle('halfBoard')}
+                      className={`w-full text-left p-2.5 rounded-xl border-2 text-xs font-semibold flex items-center justify-between transition-all ${filters.mealPlan === 'halfBoard' ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      <span className="flex items-center gap-2">🍛 {t("Including Breakfast + Lunch/Dinner", "नाश्ता + लंच/डिनर शामिल")}</span>
+                      {filters.mealPlan === 'halfBoard' && <span className="text-amber-600 font-bold">✓</span>}
+                    </button>
+                    <button
+                      onClick={() => handleMealPlanToggle('fullBoard')}
+                      className={`w-full text-left p-2.5 rounded-xl border-2 text-xs font-semibold flex items-center justify-between transition-all ${filters.mealPlan === 'fullBoard' ? 'bg-amber-100 border-amber-500 text-amber-800 shadow-sm' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300'}`}
+                    >
+                      <span className="flex items-center gap-2">🍲 {t("Including Breakfast + Lunch + Dinner", "तीनों समय का भोजन शामिल")}</span>
+                      {filters.mealPlan === 'fullBoard' && <span className="text-amber-600 font-bold">✓</span>}
+                    </button>
+                  </div>
+                </div>
+
               </div>
 
-              <div className="mt-8 pt-4 border-t border-zinc-200 text-xs text-zinc-400 font-medium italic">
-                💡 {t("Note: Actual inclusions adapt perfectly depending on the chosen hotel property and dynamic vacancy timelines.", "नोट: वास्तविक शामिल सुविधाएं चुनी गई होटल प्रॉपर्टी और समय के अनुसार बदल सकती हैं।")}
+              <div className="mt-5 pt-3 border-t border-zinc-200 text-[10px] text-zinc-500 font-medium italic leading-relaxed">
+                💡 {t("Selected choices will compile instantly and get shared on WhatsApp automatically with our booking experts.", "चुनी गई पसंदीदा सुविधाएं अपने आप आपके व्हाट्सएप संदेश में जुड़ जाएंगी ताकि हमारे एक्सपर्ट सही होटल ढूंढ सकें।")}
               </div>
             </div>
 
@@ -357,6 +560,7 @@ export default function App() {
         </div>
       </section>
 
+      {}
       {/* Family-First Assurances (Highly Appreciated in Tier 2 / Tier 3) */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 mb-24">
         <div className="bg-amber-50/60 rounded-3xl border border-amber-200/50 p-8 md:p-12">
@@ -451,57 +655,66 @@ export default function App() {
         </div>
       </section>
 
-      {/* Premium Testimonials Section */}
+      {}
+      {/* Why Us Section */}
       <section className="bg-gradient-to-b from-zinc-50 to-zinc-100 border-t border-zinc-200 py-20 px-4 md:px-6 mb-12">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center max-w-xl mx-auto mb-14">
-            <h3 className="text-3xl md:text-4xl font-serif font-bold text-zinc-800 mb-2">{t("Stories From Verified Saathis", "हमारे खुश यात्रियों के अनुभव")}</h3>
-            <p className="text-zinc-500 font-medium">{t("See how families and groups travel hassle-free across India with our personalized support.", "देखें कैसे भारतीय परिवार हमारे व्यक्तिगत सहयोग से बिना किसी तनाव के सुखद यात्रा करते हैं।")}</p>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <span className="text-3xl">🤝</span>
+            <h3 className="text-3xl md:text-4xl font-serif font-bold text-zinc-800 mt-3 mb-4">
+              {t("Why Choose StaySaathi?", "हम ही क्यों चुनें?")}
+            </h3>
+            <p className="text-zinc-600 font-medium">
+              {t("We stand beside you as a true friend, ensuring your holidays are entirely stress-free and full of genuine comfort.", "हम एक सच्चे दोस्त की तरह आपके साथ खड़े हैं, ताकि आपका सफर बिना किसी तनाव और पूरी सुख-सुविधाओं के साथ पूरा हो।")}
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-2xl border border-zinc-200/60 shadow-sm flex flex-col justify-between">
-              <p className="text-zinc-600 text-sm leading-relaxed italic">
-                "{t("Saved me nearly 4 hours of reading fake reviews on booking apps. The property suggested in Goa was very decent, safe, and located right near a clean beach. Perfect for my family.", "बुकिंग एप्स पर घंटों झूठे रिव्यूज पढ़ने से बच गए। गोवा में जो होटल सुझाया गया था वह बेहद पारिवारिक, सुरक्षित और साफ बीच के करीब था।")}"
-              </p>
-              <div className="mt-5 flex items-center gap-3 pt-4 border-t border-zinc-100">
-                <div className="w-9 h-9 bg-amber-100 text-amber-800 font-bold rounded-full flex items-center justify-center text-sm">RK</div>
-                <div>
-                  <h5 className="text-sm font-bold text-zinc-800">Rohan Kapoor</h5>
-                  <p className="text-zinc-400 text-xs font-semibold uppercase">{t("Traveled to Goa", "गोवा की यात्रा की")}</p>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            
+            {/* Core Point 1: Real Humans, No Robots */}
+            <div className="bg-white p-8 rounded-3xl border border-zinc-200/50 shadow-sm flex gap-5 hover:shadow-md transition">
+              <div className="w-14 h-14 bg-red-50 text-red-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 font-bold">👤</div>
+              <div>
+                <h4 className="text-xl font-bold text-zinc-800 mb-2">
+                  {t("Real Humans, No Confusing AI or Bots", "असली इंसानी मदद, कोई उलझाने वाले रोबोट्स नहीं")}
+                </h4>
+                <p className="text-zinc-500 text-sm leading-relaxed">
+                  {t("No automated robotic replies or confusing multi-search websites with fake reviews. Our dedicated destination experts handle your planning and hotel screening headache entirely.", "कोई ऑटोमैटिक रोबोटिक जवाब या उलझाने वाली ढेरों वेबसाइट्स नहीं। आपके सफर की प्लानिंग और होटल्स की बारीक से जांच करने का पूरा सिरदर्द हमारे असली एक्सपर्ट खुद लेते हैं।")}
+                </p>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-zinc-200/60 shadow-sm flex flex-col justify-between">
-              <p className="text-zinc-600 text-sm leading-relaxed italic">
-                "{t("I was highly hesitant about online sites at first. But StaySaathi directly managed room-type matching options, extra bed for child, and guided us directly on WhatsApp with pure vegetarian restaurant locations.", "पहले मैं संकोच कर रही थी, लेकिन इन्होंने व्हाट्सएप पर ही हमारी मनपसंद शुद्ध शाकाहारी भोजन व्यवस्था वाले होटल के साथ शानदार कमरा बुक करवा दिया। बहुत ही भरोसेमंद।")}"
-              </p>
-              <div className="mt-5 flex items-center gap-3 pt-4 border-t border-zinc-100">
-                <div className="w-9 h-9 bg-amber-100 text-amber-800 font-bold rounded-full flex items-center justify-center text-sm">MS</div>
-                <div>
-                  <h5 className="text-sm font-bold text-zinc-800">Meera Sharma</h5>
-                  <p className="text-zinc-400 text-xs font-semibold uppercase">{t("Traveled to Jaipur", "जयपुर की यात्रा की")}</p>
-                </div>
+            {/* Core Point 2: Carefully Reviewed Value */}
+            <div className="bg-white p-8 rounded-3xl border border-zinc-200/50 shadow-sm flex gap-5 hover:shadow-md transition">
+              <div className="w-14 h-14 bg-amber-50 text-amber-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 font-bold">🔍</div>
+              <div>
+                <h4 className="text-xl font-bold text-zinc-800 mb-2">
+                  {t("Handpicked & Carefully Reviewed Options", "पूरी तरह परखे और जांचे गए बेहतरीन विकल्प")}
+                </h4>
+                <p className="text-zinc-500 text-sm leading-relaxed">
+                  {t("Get carefully hand-screened hotels that offer much better comfort, safe neighborhoods, and true value for your exact price point—none of the guesswork or fake app listings.", "अपने बजट में वो चुनिंदा होटल्स और रिसॉर्ट्स पाएं जिन्हें हमने खुद सुरक्षा और आराम के पैमानों पर परखा है। साधारण बुकिंग ऐप्स के भ्रामक वादों और अधूरी जानकारियों से बिल्कुल सुरक्षित।")}
+                </p>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border border-zinc-200/60 shadow-sm flex flex-col justify-between">
-              <p className="text-zinc-600 text-sm leading-relaxed italic">
-                "{t("Traveling with elderly parents can be stressful because they cannot walk much. They selected a property in Rishikesh with perfect elevator access and rooms on lower floors. Incredible human touch.", "बुजुर्ग माता-पिता के साथ यात्रा करना कठिन होता है क्योंकि वे ज्यादा चल नहीं सकते। इन्होंने ऋषिकेश में लिफ्ट सुविधा और ग्राउंड फ्लोर वाला बेहतरीन होटल ढूंढकर दिया।")}"
-              </p>
-              <div className="mt-5 flex items-center gap-3 pt-4 border-t border-zinc-100">
-                <div className="w-9 h-9 bg-amber-100 text-amber-800 font-bold rounded-full flex items-center justify-center text-sm">DV</div>
-                <div>
-                  <h5 className="text-sm font-bold text-zinc-800">Dr. Divya Verma</h5>
-                  <p className="text-zinc-400 text-xs font-semibold uppercase">{t("Traveled to Rishikesh", "ऋषिकेश की यात्रा की")}</p>
-                </div>
+            {/* Core Point 3: Safe Direct Hotel Payments */}
+            <div className="bg-white p-8 rounded-3xl border border-zinc-200/50 shadow-sm flex gap-5 hover:shadow-md transition">
+              <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-3xl shrink-0 font-bold">💳</div>
+              <div>
+                <h4 className="text-xl font-bold text-zinc-800 mb-2">
+                  {t("Direct & Safe Hotel Payments", "सीधे और सुरक्षित भुगतान")}
+                </h4>
+                <p className="text-zinc-500 text-sm leading-relaxed">
+                  {t("Enjoy complete financial peace of mind. Pay directly to the hotel's verified account or their official secure payment link with zero middleman holding risks.", "पैसों की पूरी सुरक्षा। बिना किसी बिचौलिए या अनजाने प्लेटफॉर्म के जोखिम के, सीधे होटल के वेरिफाइड बैंक खाते या सुरक्षित भुगतान लिंक पर अपना पेमेंट करें।")}
+                </p>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
+      {}
       {/* FAQ */}
       <section className="max-w-4xl mx-auto px-4 md:px-6 py-12 mb-16">
         <h3 className="text-3xl md:text-4xl font-serif font-bold text-center mb-10 text-zinc-800">{t("Frequently Asked Questions", "अक्सर पूछे जाने वाले सवाल")}</h3>
@@ -521,6 +734,7 @@ export default function App() {
         </div>
       </section>
 
+      {}
       {/* Footer */}
       <footer className="bg-zinc-900 text-zinc-100 py-12 px-4 md:px-6 border-t-4 border-amber-500">
         <div className="max-w-7xl mx-auto text-center">
