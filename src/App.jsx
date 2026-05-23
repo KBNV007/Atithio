@@ -117,11 +117,11 @@ export default function App() {
       monthHi: "जनवरी",
       icon: "❄️",
       places: [
-        { dest: "Manali", icon: "🏔️", titleEn: "Snowy Manali Escapes", titleHi: "बर्फबारी और मनाली की वादियां", descEn: "Perfect for winter lovers! Enjoy scenic snowfall, skiing, and cozy mountain resort fireplace rooms.", descHi: "सर्दियों के प्रेमियों के लिए! ताज़ा बर्फबारी, स्कीइंग और गर्म आरामदायक रिज़ॉर्ट्स का आनंद लें।", tagEn: "Snow Peak", tagHi: "बर्फ़ीली वादियाँ" },
-        { dest: "Auli", icon: "🎿", titleEn: "Auli Skiing Meadows", titleHi: "औली स्कीइंग और देवदार के जंगल", descEn: "Breathtaking Himalayan snow slopes. Great for scenic cable-car rides with kids.", descHi: "भव्य हिमालयी बर्फ के मैदान। बच्चों के साथ केबल कार की रोमांचक सवारी के लिए सर्वश्रेष्ठ स्थान।" , tagEn: "Skiing Spot", tagHi: "स्कीइंग प्रेमी" },
-        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Dunes", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Pleasant days for camel safaris, luxury swiss camping under stars, and cultural puppet shows.", descHi: "ऊंत की सवारी, तारों की छांव में लग्जरी स्विस कैंपिंग और सांस्कृतिक कठपुतली शो के लिए सुखद दिन।", tagEn: "Desert Magic", tagHi: "रेगिस्तानी जादू" },
-        { dest: "Goa", icon: "🏖️", titleEn: "South Goa Beaches", titleHi: "शांतिपूर्ण दक्षिण गोवा के बीच", descEn: "Mild winter sun. Best for peaceful beach walks, safe kid-friendly shallow waters, and cool evening shacks.", descHi: "हल्की सर्दियों की धूप। शांतिपूर्ण सैर, सुरक्षित उथले पानी और बच्चों के साथ स्वादिष्ट भोजन के लिए उत्तम।", tagEn: "Winter Sun", tagHi: "धूप और रेत" },
-        { dest: "Shimla", icon: "🚂", titleEn: "Shimla Heritage Toy Train", titleHi: "शिमला की ऐतिहासिक टॉय ट्रेन", descEn: "Enjoy snowy walking tracks along Mall Road, warm wood shopping, and historic mountain train journeys.", descHi: "मॉल रोड पर बर्फबारी के नज़ारे, लकड़ी के सुंदर हस्तशिल्प और ऐतिहासिक पहाड़ी ट्रेन का शानदार सफर।", tagEn: "Colonial Classic", tagHi: "ऐतिहासिक हिल्स" }
+        { dest: "Manali", icon: "🏔️", titleEn: "Snowy Manali Escapes", titleHi: "बर्फबारी और मनाली की वादियां", descEn: "Perfect for winter lovers! Enjoy scenic snowfall, skiing, and cozy mountain resort fireplace rooms.", descHi: "सर्दियों के प्रेमियों के लिए! ताज़ा बर्फबारी, स्कीइंग और गर्म आरामदायक रिज़ॉर्ट्स का आनंद लें।" },
+        { dest: "Auli", icon: "🎿", titleEn: "Auli Skiing Meadows", titleHi: "औली स्कीइंग और देवदार के जंगल", descEn: "Breathtaking Himalayan snow slopes. Great for scenic cable-car rides with kids.", descHi: "भव्य हिमालयी बर्फ के मैदान। बच्चों के साथ केबल कार की रोमांचक सवारी के लिए सर्वश्रेष्ठ स्थान।" },
+        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Dunes", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Pleasant days for camel safaris, luxury swiss camping under stars, and cultural puppet shows.", descHi: "ऊंत की सवारी, तारों की छांव में लग्जरी स्विस कैंपिंग और सांस्कृतिक कठपुतली शो के लिए सुखद दिन।" },
+        { dest: "Goa", icon: "🏖️", titleEn: "South Goa Beaches", titleHi: "शांतिपूर्ण दक्षिण गोवा के बीच", descEn: "Mild winter sun. Best for peaceful beach walks, safe kid-friendly shallow waters, and cool evening shacks.", descHi: "हल्की सर्दियों की धूप। शांतिपूर्ण सैर, सुरक्षित उथले पानी और बच्चों के साथ स्वादिष्ट भोजन के लिए उत्तम।" },
+        { dest: "Shimla", icon: "🚂", titleEn: "Shimla Heritage Toy Train", titleHi: "शिमला की ऐतिहासिक टॉय ट्रेन", descEn: "Enjoy snowy walking tracks along Mall Road, warm wood shopping, and historic mountain train journeys.", descHi: "मॉल रोड पर बर्फबारी के नज़ारे, लकड़ी के सुंदर हस्तशिल्प और ऐतिहासिक पहाड़ी ट्रेन का शानदार सफर।" }
       ]
     },
     {
@@ -130,11 +130,11 @@ export default function App() {
       monthHi: "फरवरी",
       icon: "🏰",
       places: [
-        { dest: "Jaipur", icon: "🏰", titleEn: "Pink City Royals", titleHi: "गुलाबी नगरी जयपुर की शाही सैर", descEn: "Excellent pleasant weather for exploring magnificent fort ramparts and local organic dining.", descHi: "भव्य किलों, विशाल उद्यानों और स्वादिष्ट पारंपरिक भोजन की खोज के लिए सबसे सुहावना मौसम।", tagEn: "Heritage", tagHi: "शाही इतिहास" },
-        { dest: "Agra", icon: "🕌", titleEn: "Agra Taj Monument", titleHi: "आगरा का भव्य ताज महल", descEn: "Crisp cool mornings perfect for taking memorable family photographs around the beautiful Taj Mahal garden.", descHi: "सुबह की सुहानी हवा में ताजमहल के बगीचे और सुंदर ऐतिहासिक महलों को देखने का सबसे बढ़िया समय।", tagEn: "Wonders", tagHi: "ऐतिहासिक अजूबा" },
-        { dest: "Jodhpur", icon: "👑", titleEn: "Sun City Blue Streets", titleHi: "जोधपुर की नीली गलियां", descEn: "Explore the giant Mehrangarh Fort and local folk puppet markets under pleasant, sweat-free skies.", descHi: "विशाल मेहरानगढ़ किले और लोक बाजारों की सुहावनी, बिना उमस वाली धूप में सैर का आनंद लें।", tagEn: "Palaces", tagHi: "शाही दुर्ग" },
-        { dest: "Kutch", icon: "🌕", titleEn: "White Salt Desert Kutch", titleHi: "कच्छ का सफेद नमक का रेगिस्तान", descEn: "Experience the majestic Rann Utsav with folk musicians under the crisp winter full moon with family.", descHi: "परिजनों के साथ चांदनी रात में शानदार सफेद मरुस्थल, पारंपरिक लोक नृत्य और हस्तशिल्प उत्सव का अनुभव करें।", tagEn: "Salt Flats", tagHi: "सांस्कृतिक उत्सव" },
-        { dest: "Gulmarg", icon: "🚠", titleEn: "Gulmarg Gondola Rides", titleHi: "गुलमर्ग के बर्फीले पहाड़", descEn: "Ride Asia's highest cable car over thick pine trees loaded with heavy white winter snow.", descHi: "सफेद बर्फ से लदे देवदार के पेड़ों के ऊपर एशिया की सबसे ऊंची केबल कार (गोंडोला) की अद्भुत सवारी करें।", tagEn: "Alpine Magic", tagHi: "बर्फीला रोमांच" }
+        { dest: "Jaipur", icon: "🏰", titleEn: "Pink City Royals", titleHi: "गुलाबी नगरी जयपुर की शाही सैर", descEn: "Excellent pleasant weather for exploring magnificent fort ramparts and local organic dining.", descHi: "भव्य किलों, विशाल उद्यानों और स्वादिष्ट पारंपरिक भोजन की खोज के लिए सबसे सुहावना मौसम।" },
+        { dest: "Agra", icon: "🕌", titleEn: "Agra Taj Monument", titleHi: "आगरा का भव्य ताज महल", descEn: "Crisp cool mornings perfect for taking memorable family photographs around the beautiful Taj Mahal garden.", descHi: "सुबह की सुहानी हवा में ताजमहल के बगीचे और सुंदर ऐतिहासिक महलों को देखने का सबसे बढ़िया समय।" },
+        { dest: "Jodhpur", icon: "👑", titleEn: "Sun City Blue Streets", titleHi: "जोधपुर की नीली गलियां", descEn: "Explore the giant Mehrangarh Fort and local folk puppet markets under pleasant, sweat-free skies.", descHi: "विशाल मेहरानगढ़ किले और लोक बाजारों की सुहावनी, बिना उमस वाली धूप में सैर का आनंद लें।" },
+        { dest: "Kutch", icon: "🌕", titleEn: "White Salt Desert Kutch", titleHi: "कच्छ का सफेद नमक का रेगिस्तान", descEn: "Experience the majestic Rann Utsav with folk musicians under the crisp winter full moon with family.", descHi: "परिजनों के साथ चांदनी रात में शानदार सफेद मरुस्थल, पारंपरिक लोक नृत्य और हस्तशिल्प उत्सव का अनुभव करें।" },
+        { dest: "Gulmarg", icon: "🏔️", titleEn: "Gulmarg Gondola Rides", titleHi: "गुलमर्ग के बर्फीले पहाड़", descEn: "Ride Asia's highest cable car over thick pine trees loaded with heavy white winter snow.", descHi: "सफेद बर्फ से लदे देवदार के पेड़ों के ऊपर एशिया की सबसे ऊंची केबल कार (गोंडोला) की अद्भुत सवारी करें।" }
       ]
     },
     {
@@ -143,11 +143,11 @@ export default function App() {
       monthHi: "मार्च",
       icon: "🪷",
       places: [
-        { dest: "Rishikesh", icon: "🪷", titleEn: "Divine Ganges Ghats", titleHi: "पवित्र ऋषिकेश गंगा घाट", descEn: "Mild river breeze. Perfect for peaceful Ganga Aarti, yoga retreats, and safe family rafting.", descHi: "हल्की ठंडी हवाएं। गंगा आरती के दर्शन, योगाश्रमों में आत्मिक शांति और पारिवारिक राफ्टिंग का सही समय।", tagEn: "Spiritual Adventure", tagHi: "गंगा आरती" },
-        { dest: "Vrindavan", icon: "🎨", titleEn: "Vibrant Holi Colors", titleHi: "वृंदावन की पावन होली", descEn: "Experience legendary traditional flower Holi celebrations, sweet pedas, and divine temple chantings.", descHi: "पारंपरिक फूलों की अनूठी होली, वृंदावन के मशहूर पेड़े और दिव्य भजनों के साथ अध्यात्म का अनुभव करें।", tagEn: "Devotion", tagHi: "पवित्र त्योहार" },
-        { dest: "Munnar", icon: "🍃", titleEn: "Emerald Munnar Hills", titleHi: "मुन्नार के हरे-भरे चाय बागान", descEn: "Breathe in sweet tea-scented air. Explore cool mist-covered winding roads and spice plantations.", descHi: "चाय की मनमोहक खुशबू वाली ताजी हवा। कोहरे से ढकी पहाड़ियों और मसालों के बागानों की सैर करें।", tagEn: "Tea Valley", tagHi: "हरियाली और सुकून" },
-        { dest: "Kaziranga", icon: "🐅", titleEn: "Kaziranga Wildlife Safaris", titleHi: "काजीरंगा वन्यजीव सफारी", descEn: "Excellent weather to spot the famous Indian One-horned Rhinoceros in lush green grasslands.", descHi: "घने जंगलों के बीच विख्यात एक सींग वाले भारतीय गैंडे और जंगली हाथियों को देखने का सबसे अनुकूल समय।", tagEn: "Nature Trail", tagHi: "जंगल सफारी" },
-        { dest: "Gokarna", icon: "🌊", titleEn: "Peaceful Gokarna Bays", titleHi: "गोकर्ण के शांत रेतीले बीच", descEn: "Serene alternative to busy beaches. Great for clean sunset viewing and temples adjacent to the sea.", descHi: "भीड़भाड़ से दूर। सुंदर साफ तटों पर डूबते सूरज के नज़ारे and प्राचीन मंदिरों के शांत दर्शन का लाभ लें।", tagEn: "Quiet Escape", tagHi: "समुद्र और शांति" }
+        { dest: "Rishikesh", icon: "🪷", titleEn: "Divine Ganges Ghats", titleHi: "पवित्र ऋषिकेश गंगा घाट", descEn: "Mild river breeze. Perfect for peaceful Ganga Aarti, yoga retreats, and safe family rafting.", descHi: "हल्की ठंडी हवाएं। गंगा आरती के दर्शन, योगाश्रमों में आत्मिक शांति और पारिवारिक राफ्टिंग का सही समय।" },
+        { dest: "Vrindavan", icon: "🎨", titleEn: "Vibrant Holi Colors", titleHi: "वृंदावन की पावन होली", descEn: "Experience legendary traditional flower Holi celebrations, sweet pedas, and divine temple chantings.", descHi: "पारंपरिक फूलों की अनूठी होली, वृंदावन के मशहूर पेड़े और दिव्य भजनों के साथ अध्यात्म का अनुभव करें।" },
+        { dest: "Munnar", icon: "🍃", titleEn: "Emerald Munnar Hills", titleHi: "मुन्नार के हरे-भरे चाय बागान", descEn: "Breathe in sweet tea-scented air. Explore cool mist-covered winding roads and spice plantations.", descHi: "चाय की मनमोहक खुशबू वाली ताजी हवा। कोहरे से ढकी पहाड़ियों और मसालों के बागानों की सैर करें।" },
+        { dest: "Kaziranga", icon: "🐅", titleEn: "Kaziranga Wildlife Safaris", titleHi: "काजीरंगा वन्यजीव सफारी", descEn: "Excellent weather to spot the famous Indian One-horned Rhinoceros in lush green grasslands.", descHi: "घने जंगलों के बीच विख्यात एक सींग वाले भारतीय गैंडे और जंगली हाथियों को देखने का सबसे अनुकूल समय।" },
+        { dest: "Gokarna", icon: "🌊", titleEn: "Peaceful Gokarna Bays", titleHi: "गोकर्ण के शांत रेतीले बीच", descEn: "Serene alternative to busy beaches. Great for clean sunset viewing and temples adjacent to the sea.", descHi: "भीड़भाड़ से दूर। सुंदर साफ तटों पर डूबते सूरज के नज़ारे और प्राचीन मंदिरों के शांत दर्शन का लाभ लें।" }
       ]
     },
     {
@@ -156,11 +156,11 @@ export default function App() {
       monthHi: "अप्रैल",
       icon: "🌸",
       places: [
-        { dest: "Kashmir", icon: "🌸", titleEn: "Kashmir Tulip Blooms", titleHi: "कश्मीर के खूबसूरत ट्यूलिप बाग", descEn: "Witness millions of colorful tulips blooming in Srinagar alongside peaceful Shikara boat rides.", descHi: "डल झील में शांत शिकारा बोट की सवारी और श्रीनगर में खिले लाखों ट्यूलिप फूलों की रंगीन चादर देखें।", tagEn: "Spring Paradise", tagHi: "फूलों की घाटी" },
-        { dest: "Ooty", icon: "🚂", titleEn: "Ooty Botanical Lakes", titleHi: "ऊटी के चाय बागान व झीलें", descEn: "Escape early summer heat. Ride the iconic heritage toy train through beautiful dense eucalyptus forests.", descHi: "मैदानी गर्मी से बचें। नीलगिरि के घने जंगलों के बीच प्रसिद्ध हेरिटेज टॉय ट्रेन की सवारी का आनंद लें।", tagEn: "Misty Valleys", tagHi: "नीलगिरि हिल्स" },
-        { dest: "Darjeeling", icon: "🏔️", titleEn: "Darjeeling Tea Estates", titleHi: "दार्जिलिंग के हिमालयी व्यू", descEn: "Magnificent views of Mount Kanchenjunga peaks. Stay in traditional family bungalows with organic farms.", descHi: "कांचनजंगा पर्वत की बर्फ से ढकी चोटियों के अद्भुत नज़ारे। जैविक चाय बागान और आरामदायक कॉटेज का मज़ा लें।", tagEn: "Himalayan View", tagHi: "चाय के बागान" },
-        { dest: "Wayanad", icon: "🌲", titleEn: "Wayanad Forest Treehouses", titleHi: "वायनाड के घने जंगलों के ट्रीहाउस", descEn: "Explore prehistoric caves, spice plantations, and treehouses nested deep inside Kerala forests.", descHi: "केरल के पहाड़ों में आदिम गुफाओं की खोज करें और घने शांत जंगलों के बीच ट्रीहाउस में ठहरें।", tagEn: "Wild Greenery", tagHi: "प्राकृतिक ट्रीहाउस" },
-        { dest: "Kodaikanal", icon: "⛵", titleEn: "Kodaikanal Misty Lakes", titleHi: "कोड़ाईकनाल की खूबसूरत झीलें", descEn: "Pedal-boat on the star-shaped lake, walk in pine forests, and watch clouds rolling into deep valleys.", descHi: "तारा-आकार की ठंडी झील में बोटिंग का आनंद लें, पाइन के शांत जंगलों में टहलें और वादियों में कोहरा बहते देखें।", tagEn: "Lake Retreat", tagHi: "शांति और कोहरा" }
+        { dest: "Kashmir", icon: "🌸", titleEn: "Kashmir Tulip Blooms", titleHi: "कश्मीर के खूबसूरत ट्यूलिप बाग", descEn: "Witness millions of colorful tulips blooming in Srinagar alongside peaceful Shikara boat rides.", descHi: "डल झील में शांत शिकारा बोट की सवारी और श्रीनगर में खिले लाखों ट्यूलिप फूलों की रंगीन चादर देखें।" },
+        { dest: "Ooty", icon: "🚂", titleEn: "Ooty Botanical Lakes", titleHi: "ऊटी के चाय बागान व झीलें", descEn: "Escape early summer heat. Ride the iconic heritage toy train through beautiful dense eucalyptus forests.", descHi: "मैदानी गर्मी से बचें। नीलगिरि के घने जंगलों के बीच प्रसिद्ध हेरिटेज टॉय ट्रेन की सवारी का आनंद लें।" },
+        { dest: "Darjeeling", icon: "🏔️", titleEn: "Darjeeling Tea Estates", titleHi: "दार्जिलिंग के हिमालयी व्यू", descEn: "Magnificent views of Mount Kanchenjunga peaks. Stay in traditional family bungalows with organic farms.", descHi: "कांचनजंगा पर्वत की बर्फ से ढकी चोटियों के अद्भुत नज़ारे। जैविक चाय बागान और आरामदायक कॉटेज का मज़ा लें।" },
+        { dest: "Wayanad", icon: "🌲", titleEn: "Wayanad Forest Treehouses", titleHi: "वायनाड के घने जंगलों के ट्रीहाउस", descEn: "Explore prehistoric caves, spice plantations, and treehouses nested deep inside Kerala forests.", descHi: "केरल के पहाड़ों में आदिम गुफाओं की खोज करें और घने शांत जंगलों के बीच ट्रीहाउस में ठहरें।" },
+        { dest: "Kodaikanal", icon: "⛵", titleEn: "Kodaikanal Misty Lakes", titleHi: "कोड़ाईकनाल की खूबसूरत झीलें", descEn: "Pedal-boat on the star-shaped lake, walk in pine forests, and watch clouds rolling into deep valleys.", descHi: "तारा-आकार की ठंडी झील में बोटिंग का आनंद लें, पाइन के शांत जंगलों में टहलें और वादियों में कोहरा बहते देखें।" }
       ]
     },
     {
@@ -169,11 +169,11 @@ export default function App() {
       monthHi: "मई",
       icon: "⛰️",
       places: [
-        { dest: "Munnar", icon: "⛰️", titleEn: "Cool Munnar Hills", titleHi: "मुन्नार की ठंडी वादियां", descEn: "Perfect escape from peak summers. Refresh amidst cascading cold waterfalls and cool tea gardens.", descHi: "भीषण गर्मी से बचने के लिए उत्तम पहाड़ी स्थान। ताज़े बहते ठंडे झरनों और हरे-भरे चाय के बागानों का आनंद लें।", tagEn: "Cool Escape", tagHi: "गर्मी से राहत" },
-        { dest: "Shimla", icon: "🌲", titleEn: "Shimla Pine Walkways", titleHi: "शिमला की ठंडी पाइन वादियां", descEn: "Pleasant 18°C temperatures. Walk on traffic-free ridges and enjoy sweet local ice creams with family.", descHi: "गर्मियों में भी सुहावना 18°C तापमान। माल रोड की स्वच्छ सड़कों पर टहलें और परिवार के साथ समय बिताएं।", tagEn: "Summer Peak", tagHi: "पहाड़ों की रानी" },
-        { dest: "Mount Abu", icon: "🧗", titleEn: "Mount Abu Lake Escapes", titleHi: "माउंट आबू के शांत नक्की लेक", descEn: "The only cool hill retreat in Rajasthan. Enjoy pleasant evening boating on Nakki Lake and cold mountain winds.", descHi: "राजस्थान का एकमात्र ठंडा हिल स्टेशन। नक्की झील पर बोटिंग और सनसेट पॉइंट पर ठंडी हवाओं का मज़ा लें।", tagEn: "Oasis", tagHi: "रेगिस्तानी हिल" },
-        { dest: "Mussoorie", icon: "⛰️", titleEn: "Mussoorie Queen of Hills", titleHi: "मसूरी की हरी-भरी पहाड़ियां", descEn: "Visit the cascading Kempty Waterfalls and enjoy cold pine breezes overlooking the vast Doon Valley.", descHi: "प्रसिद्ध केम्प्टी फॉल्स के ठंडे पानी में नहाएं और दून घाटी का मनमोहक नज़ारा पेश करने वाले हिल रिसॉर्ट्स में ठहरें।", tagEn: "Hill Station", tagHi: "मशहूर हिल स्टेशन" },
-        { dest: "Gangtok", icon: "🏔️", titleEn: "Gangtok Buddhist Trails", titleHi: "गंगटोक के बौद्ध मठ और झीलें", descEn: "Marvelous Himalayan views, clean mountain air, and colorful flower-decorated pathways with local monasteries.", descHi: "शानदार कंचनजंगा व्यू, पहाड़ों की साफ ठंडी हवा और बौद्ध भिक्षुओं की प्रार्थनाओं से गुंजायमान सुंदर मठ।", tagEn: "Monasteries", tagHi: "हिमालयन संस्कृति" }
+        { dest: "Munnar", icon: "⛰️", titleEn: "Cool Munnar Hills", titleHi: "मुन्नार की ठंडी वादियां", descEn: "Perfect escape from peak summers. Refresh amidst cascading cold waterfalls and cool tea gardens.", descHi: "भीषण गर्मी से बचने के लिए उत्तम पहाड़ी स्थान। ताज़े बहते ठंडे झरनों और हरे-भरे चाय के बागानों का आनंद लें।" },
+        { dest: "Shimla", icon: "🌲", titleEn: "Shimla Pine Walkways", titleHi: "शिमला की ठंडी पाइन वादियां", descEn: "Pleasant 18°C temperatures. Walk on traffic-free ridges and enjoy sweet local ice creams with family.", descHi: "गर्मियों में भी सुहावना 18°C तापमान। माल रोड की स्वच्छ सड़कों पर टहलें और परिवार के साथ समय बिताएं।" },
+        { dest: "Mount Abu", icon: "🧗", titleEn: "Mount Abu Lake Escapes", titleHi: "माउंट आबू के शांत नक्की लेक", descEn: "The only cool hill retreat in Rajasthan. Enjoy pleasant evening boating on Nakki Lake and cold mountain winds.", descHi: "राजस्थान का एकमात्र ठंडा हिल स्टेशन। नक्की झील पर बोटिंग और सनसेट पॉइंट पर ठंडी हवाओं का मज़ा लें।" },
+        { dest: "Mussoorie", icon: "⛰️", titleEn: "Mussoorie Queen of Hills", titleHi: "मसूरी की हरी-भरी पहाड़ियां", descEn: "Visit the cascading Kempty Waterfalls and enjoy cold pine breezes overlooking the vast Doon Valley.", descHi: "प्रसिद्ध केम्प्टी फॉल्स के ठंडे पानी में नहाएं और दून घाटी का मनमोहक नज़ारा पेश करने वाले हिल रिसॉर्ट्स में ठहरें।" },
+        { dest: "Gangtok", icon: "🏔️", titleEn: "Gangtok Buddhist Trails", titleHi: "गुकटोक के बौद्ध मठ और झीलें", descEn: "Marvelous Himalayan views, clean mountain air, and colorful flower-decorated pathways with local monasteries.", descHi: "शानदार कंचनजंगा व्यू, पहाड़ों की साफ ठंडी हवा और बौद्ध भिक्षुओं की प्रार्थनाओं से गुंजायमान सुंदर मठ।" }
       ]
     },
     {
@@ -182,11 +182,11 @@ export default function App() {
       monthHi: "जून",
       icon: "🏍️",
       places: [
-        { dest: "Leh Ladakh", icon: "⛰️", titleEn: "Ladakh High Passes", titleHi: "लद्दाख के ऊंचे बर्फीले दर्रे", descEn: "Mountain passes open up fully. Breathtaking blue lakes, high cold deserts, and historic ancient monasteries.", descHi: "सभी बर्फीले रास्ते खुल जाते हैं। शांत नीली झीलें, ठंडी रेतीली वादियाँ और प्राचीन तिब्बती मठों का अनुभव करें।", tagEn: "High Altitude", tagHi: "रोमांचक लद्दाख" },
-        { dest: "Spiti Valley", icon: "🏔️", titleEn: "Spiti Desert Mountains", titleHi: "स्पीति वैली की ठंडी मरुभूमि", descEn: "Travel to remote clean cold deserts, mud monasteries, and high-altitude safe family homestays.", descHi: "सड़क मार्ग से सुलभ होने वाली सुंदर घाटी। प्राचीन तिब्बती वास्तुकला वाले गांवों और सेब के बागानों को देखें।", tagEn: "Remote Valley", tagHi: "पहाड़ी गांव" },
-        { dest: "Manali", icon: "🏔️", titleEn: "Solang Adventure Parks", titleHi: "मनाली और सोलांग वैली", descEn: "Go paragliding, visit the Rohtang Pass snow walls, and walk along gushing Beas River mountain streams.", descHi: "रोहतांग पास की विशाल बर्फ की दीवारें देखें, पैराग्लाइडिंग करें और व्यास नदी के ठंडे पानी के पास पिकनिक मनाएं।", tagEn: "Adventure", tagHi: "रोमांचक वादियां" },
-        { dest: "Dharamshala", icon: "☸️", titleEn: "Dharamshala Peace Walks", titleHi: "धर्मशाला and मैक्लोडगंज के मठ", descEn: "Cool pine forests and spiritual Buddhist temples. Handpick organic green tea from beautiful local estates.", descHi: "देवदार के ठंडे जंगल और शांतिपूर्ण बौद्ध मंदिर। सुंदर तिब्बती बाजारों और स्थानीय चाय बागानों की सैर करें।", tagEn: "Tibetan Vibe", tagHi: "शांति और अध्यात्म" },
-        { dest: "Gulmarg", icon: "🚠", titleEn: "Gulmarg Summer Meadows", titleHi: "गुलमर्ग के हरे-भरे घास के मैदान", descEn: "Prisinte green meadows in summer. Play family mini-golf or take scenic pony rides along peaceful valleys.", descHi: "गर्मियों में मखमली घास के मैदान। पहाड़ों के बीच बच्चों के साथ घुड़सवारी और ठंडी प्राकृतिक सैर का आनंद लें।", tagEn: "Green Slopes", tagHi: "मखमली पहाड़ियां" }
+        { dest: "Leh Ladakh", icon: "⛰️", titleEn: "Ladakh High Passes", titleHi: "लद्दाख के ऊंचे बर्फीले दर्रे", descEn: "Mountain passes open up fully. Breathtaking blue lakes, high cold deserts, and historic ancient monasteries.", descHi: "सभी बर्फीले रास्ते खुल जाते हैं। शांत नीली झीलें, ठंडी रेतीली वादियाँ और प्राचीन तिब्बती मठों का अनुभव करें।" },
+        { dest: "Spiti Valley", icon: "🏔️", titleEn: "Spiti Desert Mountains", titleHi: "स्पीति वैली की ठंडी मरुभूमि", descEn: "Travel to remote clean cold deserts, mud monasteries, and high-altitude safe family homestays.", descHi: "सड़क मार्ग से सुलभ होने वाली सुंदर घाटी। प्राचीन तिब्बती वास्तुकला वाले गांवों और सेब के बागानों को देखें।" },
+        { dest: "Manali", icon: "🏔️", titleEn: "Solang Adventure Parks", titleHi: "मनाली और सोलांग वैली", descEn: "Go paragliding, visit the Rohtang Pass snow walls, and walk along gushing Beas River mountain streams.", descHi: "रोहतांग पास की विशाल बर्फ की दीवारें देखें, पैराग्लाइडिंग करें और व्यास नदी के ठंडे पानी के पास पिकनिक मनाएं।" },
+        { dest: "Dharamshala", icon: "☸️", titleEn: "Dharamshala Peace Walks", titleHi: "धर्मशाला और मैक्लोडगंज के मठ", descEn: "Cool pine forests and spiritual Buddhist temples. Handpick organic green tea from beautiful local estates.", descHi: "देवदार के ठंडे जंगल और शांतिपूर्ण बौद्ध मंदिर। सुंदर तिब्बती बाजारों और स्थानीय चाय बागानों की सैर करें।" },
+        { dest: "Gulmarg", icon: "🚠", titleEn: "Gulmarg Summer Meadows", titleHi: "गुलमर्ग के हरे-भरे घास के मैदान", descEn: "Prisinte green meadows in summer. Play family mini-golf or take scenic pony rides along peaceful valleys.", descHi: "गर्मियों में मखमली घास के मैदान। पहाड़ों के बीच बच्चों के साथ घुड़सवारी और ठंडी प्राकृतिक सैर का आनंद लें।" }
       ]
     },
     {
@@ -195,11 +195,11 @@ export default function App() {
       monthHi: "जुलाई",
       icon: "🌧️",
       places: [
-        { dest: "Lonavala", icon: "🌧️", titleEn: "Monsoon Mist Lonavala", titleHi: "लोनावला के मानसून झरने", descEn: "Monsoon paradise! Clouds rolling over green hills, piping hot corn cobs, and roaring seasonal mountain waterfalls.", descHi: "हर तरफ बिखरी मानसून की हरी चादर, गरमा-गरम भुट्टे और पहाड़ों से बहते सुंदर झरने।", tagEn: "Monsoon Magic", tagHi: "मानसून नज़ारे" },
-        { dest: "Valley of Flowers", icon: "🌸", titleEn: "Himalayan Flower Bloom", titleHi: "उत्तराखंड की फूलों की घाटी", descEn: "Rare alpine flowers bloom into thousands of colors across the high meadows during early rain showers.", descHi: "मानसून की बौछारों के साथ पहाड़ों पर खिलने वाले लाखों दुर्लभ हिमालयी फूल और जादुई हरी वादियां।", tagEn: "Alpine Blooms", tagHi: "फूलों का स्वर्ग" },
-        { dest: "Coorg", icon: "☕", titleEn: "Coorg Coffee Estates", titleHi: "कूर्ग के चाय व कॉफी बागान", descEn: "Watch waterfalls swelling with rainwater and breathe in fresh coffee-scented forest air under mild drizzle.", descHi: "बारिश के पानी से लबालब भरते झरने और कूर्ग के घने जंगलों के बीच कॉफी की ताज़ा भीनी-भीनी खुशबू का आनंद लें।", tagEn: "Rainforest", tagHi: "कॉफी की महक" },
-        { dest: "Mahabaleshwar", icon: "🍓", titleEn: "Misty Mahabaleshwar", titleHi: "महाबलेश्वर की धुंध और घाटियां", descEn: "Beautiful valley viewpoints covered in rolling clouds. Enjoy delicious fresh organic strawberry cream desserts.", descHi: "कोहरे से ढकी सुंदर घाटियां। ताज़ा स्ट्रॉबेरी क्रीम डेसर्ट और पहाड़ों से गिरती पानी की बौछारों का आनंद लें।", tagEn: "Strawberry Hill", tagHi: "धुंध और हरियाली" },
-        { dest: "Udaipur", icon: "🏰", titleEn: "Udaipur Lake Palaces", titleHi: "उदयपुर के लबालब भरे तालाब", descEn: "The lakes fill up beautifully during monsoons. Enjoy pleasant cool winds while boating near heritage palaces.", descHi: "बारिश में झीलें पानी से लबालब भर जाती हैं। झीलों के शहर में बोटिंग और महलों के शानदार दृश्यों का आनंद लें।", tagEn: "Lake Royalty", tagHi: "झीलों की नगरी" }
+        { dest: "Lonavala", icon: "🌧️", titleEn: "Monsoon Mist Lonavala", titleHi: "लोनावला के मानसून झरने", descEn: "Monsoon paradise! Clouds rolling over green hills, piping hot corn cobs, and roaring seasonal mountain waterfalls.", descHi: "हर तरफ बिखरी मानसून की हरी चादर, गरमा-गरम भुट्टे और पहाड़ों से बहते सुंदर झरने।" },
+        { dest: "Valley of Flowers", icon: "🌸", titleEn: "Himalayan Flower Bloom", titleHi: "उत्तराखंड की फूलों की घाटी", descEn: "Rare alpine flowers bloom into thousands of colors across the high meadows during early rain showers.", descHi: "मानसून की बौछारों के साथ पहाड़ों पर खिलने वाले लाखों दुर्लभ हिमालयी फूल और जादुई हरी वादियां।" },
+        { dest: "Coorg", icon: "☕", titleEn: "Coorg Coffee Estates", titleHi: "कूर्ग के चाय व कॉफी बागान", descEn: "Watch waterfalls swelling with rainwater and breathe in fresh coffee-scented forest air under mild drizzle.", descHi: "बारिश के पानी से लबालब भरते झरने और कूर्ग के घने जंगलों के बीच कॉफी की ताज़ा भीनी-भीनी खुशबू का आनंद लें।" },
+        { dest: "Mahabaleshwar", icon: "🍓", titleEn: "Misty Mahabaleshwar", titleHi: "महाबलेश्वर की धुंध और घाटियां", descEn: "Beautiful valley viewpoints covered in rolling clouds. Enjoy delicious fresh organic strawberry cream desserts.", descHi: "कोहरे से ढकी सुंदर घाटियां। ताज़ा स्ट्रॉबेरी क्रीम डेसर्ट और पहाड़ों से गिरती पानी की बौछारों का आनंद लें।" },
+        { dest: "Udaipur", icon: "🏰", titleEn: "Udaipur Lake Palaces", titleHi: "उदयपुर के लबालब भरे तालाब", descEn: "The lakes fill up beautifully during monsoons. Enjoy pleasant cool winds while boating near heritage palaces.", descHi: "बारिश में झीलें पानी से लबालब भर जाती हैं। झीलों के शहर में बोटिंग और महलों के शानदार दृश्यों का आनंद लें।" }
       ]
     },
     {
@@ -208,11 +208,11 @@ export default function App() {
       monthHi: "अगस्त",
       icon: "🌴",
       places: [
-        { dest: "Kerala", icon: "🌴", titleEn: "Lush Backwater Stays", titleHi: "केरल के शांत नारियल के बाग", descEn: "Post-monsoon leaves backwaters ultra-clean and green. Stay in premium traditional houseboats safely.", descHi: "बारिश के बाद की अद्भुत चमकीली हरियाली। नारियल के पेड़ों के बीच तैरते शानदार सुरक्षित हाउसबोट का मज़ा।", tagEn: "Backwaters", tagHi: "हाउसबोट सफर" },
-        { dest: "Cherrapunji", icon: "🌧️", titleEn: "Greenest Cherrapunji", titleHi: "चेरापूंजी के बादलों का घर", descEn: "Experience the majestic rain! Watch roaring waterfalls and walk on living root bridges in clean air.", descHi: "दुनिया की सबसे भारी बारिश के रोमांच, बादलों की लुका-छिपी और प्राचीन लिविंग रूट ब्रिजों की सैर का अनुभव करें।", tagEn: "Heavy Rains", tagHi: "मेघालय के बादल" },
-        { dest: "Mount Abu", icon: "⛰️", titleEn: "Misty Abu Monsoons", titleHi: "माउंट आबू के मानसून झरने", descEn: "Misty lakes and waterfalls rolling over green rocks. Enjoy pleasant cool evening shopping walks.", descHi: "कोहरे से ढकी झीलें और पहाड़ों से बहते सुंदर झरने। राजस्थानी और गुजराती भोजन व शाम की ठंडी सैर का आनंद लें।", tagEn: "Rainy Oasis", tagHi: "राजस्थान के पहाड़" },
-        { dest: "Coorg", icon: "🌿", titleEn: "Coorg Mist Waterfalls", titleHi: "कूर्ग के घने मानसून वन", descEn: "Spot seasonal wildlife, walk inside spice gardens, and listen to the relaxing sound of natural rain.", descHi: "इलायची और काली मिर्च के खुशबूदार बागानों में टहलें और शांत वातावरण में मानसून की फुहारों का आनंद लें।", tagEn: "Fresh Wilderness", tagHi: "हरी वादियां" },
-        { dest: "Athirappilly", icon: "🌊", titleEn: "Niagara Falls of India", titleHi: "अथिरापल्ली के विशाल झरने", descEn: "Witness Kerala's largest, most majestic waterfall swelling in full capacity with dramatic roaring waters.", descHi: "भारत का सबसे विशाल और भव्य झरना जो मानसून के दौरान अपने पूरे वेग के साथ दहाड़ते हुए गिरता है।", tagEn: "Giant Waterfall", tagHi: "बाहुबली फॉल्स" }
+        { dest: "Kerala", icon: "🌴", titleEn: "Lush Backwater Stays", titleHi: "केरल के शांत नारियल के बाग", descEn: "Post-monsoon leaves backwaters ultra-clean and green. Stay in premium traditional houseboats safely.", descHi: "बारिश के बाद की अद्भुत चमकीली हरियाली। नारियल के पेड़ों के बीच तैरते शानदार सुरक्षित हाउसबोट का मज़ा।" },
+        { dest: "Cherrapunji", icon: "🌧️", titleEn: "Greenest Cherrapunji", titleHi: "चेरापूंजी के बादलों का घर", descEn: "Experience the majestic rain! Watch roaring waterfalls and walk on living root bridges in clean air.", descHi: "दुनिया की सबसे भारी बारिश के रोमांच, बादलों की लुका-छिपी और प्राचीन लिविंग ROOT ब्रिजों की सैर का अनुभव करें।" },
+        { dest: "Mount Abu", icon: "⛰️", titleEn: "Misty Abu Monsoons", titleHi: "माउंट आबू के मानसून झरने", descEn: "Misty lakes and waterfalls rolling over green rocks. Enjoy pleasant cool evening shopping walks.", descHi: "कोहरे से ढकी झीलें और पहाड़ों से बहते सुंदर झरने। राजस्थानी और गुजराती भोजन व शाम की ठंडी सैर का आनंद लें।" },
+        { dest: "Coorg", icon: "🌿", titleEn: "Coorg Mist Waterfalls", titleHi: "कूर्ग के घने मानसून वन", descEn: "Spot seasonal wildlife, walk inside spice gardens, and listen to the relaxing sound of natural rain.", descHi: "इलायची और काली मिर्च के खुशबूदार बागानों में टहलें और शांत वातावरण में मानसून की फुहारों का आनंद लें।" },
+        { dest: "Athirappilly", icon: "🌊", titleEn: "Niagara Falls of India", titleHi: "अथिरापल्ली के विशाल झरने", descEn: "Witness Kerala's largest, most majestic waterfall swelling in full capacity with dramatic roaring waters.", descHi: "भारत का सबसे विशाल और भव्य झरना जो मानसून के दौरान अपने पूरे वेग के साथ दहाड़ते हुए गिरता है।" }
       ]
     },
     {
@@ -221,11 +221,11 @@ export default function App() {
       monthHi: "सितंबर",
       icon: "👑",
       places: [
-        { dest: "Udaipur", icon: "👑", titleEn: "Udaipur Post-Monsoon", titleHi: "उदयपुर के सुंदर हेरिटेज तालाब", descEn: "The weather clears up beautifully. Ideal for lakeside family dining and sunset heritage photography.", descHi: "बारिश के बाद आसमान साफ हो जाता है और झीलें पानी से भरी रहती हैं। झील किनारे शाही भोजन का आनंद लें।", tagEn: "Scenic Lakes", tagHi: "झीलों की सैर" },
-        { dest: "Lonavala", icon: "🍃", titleEn: "Lonavala Green Meadows", titleHi: "लोनावला के शांत मखमली पहाड़", descEn: "Vast clean green rolling grasslands without heavy downpours. Enjoy pleasant weather and scenic drives.", descHi: "बिना भारी बारिश के सुहाना सुहावना मौसम। मुंबई-पुणे हाईवे के पास पहाड़ों की सुखद सैर और ट्रेकिंग।", tagEn: "Post-Rain", tagHi: "सुहावना मानसून" },
-        { dest: "Valley of Flowers", icon: "🌺", titleEn: "Prisinte Valley Blooms", titleHi: "उत्तराखंड के ताज़ा मखमली मैदान", descEn: "Catch the final bloom of rare Himalayan valley flowers before the winter cold starts setting in.", descHi: "सर्दियों की दस्तक से ठीक पहले खिलने वाले सुंदर फूलों से महकते पहाड़ों पर शांतिपूर्ण ट्रैकिंग करें।", tagEn: "Autumn Bloom", tagHi: "फूलों का स्वर्ग" },
-        { dest: "Rishikesh", icon: "🧗", titleEn: "Ganga River Rafting Opens", titleHi: "ऋषिकेश में एडवेंचर की शुरुआत", descEn: "Enjoy the crisp post-monsoon clean waters. Safe guides reopen family river rafting and forest camping.", descHi: "बारिश के बाद गंगा का पानी बिल्कुल साफ और वेग से भरा होता है। रिवर राफ्टिंग और कैम्पिंग की दोबारा शुरुआत।", tagEn: "Rafting Reopens", tagHi: "साहसिक खेल" },
-        { dest: "Wayanad", icon: "🏡", titleEn: "Wayanad Bamboo Rafting", titleHi: "वायनाड के झरने और बांध", descEn: "Enjoy bamboo rafting on peaceful lakes and walk on eco-friendly wooden forest bridges with family.", descHi: "शांत झीलों में बांस के पारंपरिक बेड़े पर बोटिंग का आनंद लें और सुंदर इको-पार्कों में समय बिताएं।", tagEn: "Eco Travel", tagHi: "हरे-भरे जंगल" }
+        { dest: "Udaipur", icon: "👑", titleEn: "Udaipur Post-Monsoon", titleHi: "उदयपुर के सुंदर हेरिटेज तालाब", descEn: "The weather clears up beautifully. Ideal for lakeside family dining and sunset heritage photography.", descHi: "बारिश के बाद आसमान साफ हो जाता है और झीलें पानी से भरी रहती हैं। झील किनारे शाही भोजन का आनंद लें।" },
+        { dest: "Lonavala", icon: "🍃", titleEn: "Lonavala Green Meadows", titleHi: "लोनावला के शांत मखमली पहाड़", descEn: "Vast clean green rolling grasslands without heavy downpours. Enjoy pleasant weather and scenic drives.", descHi: "बिना भारी बारिश के सुहाना सुहावना मौसम। मुंबई-पुणे हाईवे के पास पहाड़ों की सुखद सैर और ट्रेकिंग।" },
+        { dest: "Valley of Flowers", icon: "🌺", titleEn: "Prisinte Valley Blooms", titleHi: "उत्तराखंड के ताज़ा मखमली मैदान", descEn: "Catch the final bloom of rare Himalayan valley flowers before the winter cold starts setting in.", descHi: "सर्दियों की दस्तक से ठीक पहले खिलने वाले सुंदर फूलों से महकते पहाड़ों पर शांतिपूर्ण ट्रैकिंग करें।" },
+        { dest: "Rishikesh", icon: "🧗", titleEn: "Ganga River Rafting Opens", titleHi: "ऋषिकेश में एडवेंचर की शुरुआत", descEn: "Enjoy the crisp post-monsoon clean waters. Safe guides reopen family river rafting and forest camping.", descHi: "बारिश के बाद गंगा का पानी बिल्कुल साफ और वेग से भरा होता है। रिवर राफ्टिंग और कैम्पिंग की दोबारा शुरुआत।" },
+        { dest: "Wayanad", icon: "🏡", titleEn: "Wayanad Bamboo Rafting", titleHi: "वायनाड के झरने और बांध", descEn: "Enjoy bamboo rafting on peaceful lakes and walk on eco-friendly wooden forest bridges with family.", descHi: "शांत झीलों में बांस के पारंपरिक बेड़े पर बोटिंग का आनंद लें और सुंदर इको-पार्कों में समय बिताएं।" }
       ]
     },
     {
@@ -234,11 +234,11 @@ export default function App() {
       monthHi: "अक्टूबर",
       icon: "🏵️",
       places: [
-        { dest: "Jaipur", icon: "🏵️", titleEn: "Jaipur Festive Markets", titleHi: "जयपुर के रंग-बिरंगे बाज़ार", descEn: "Warm pleasant evenings. Great for local festive shopping, heritage walks, and traditional food courts.", descHi: "सुहावनी शामें। दिवाली की खरीदारी, पुराने महलों की सैर और लजीज पारम्परिक खाने का आनंद लें।", tagEn: "Festivals", tagHi: "त्योहारी रौनक" },
-        { dest: "Hampi", icon: "🏛️", titleEn: "Ancient Hampi Ruins", titleHi: "हम्पी के ऐतिहासिक पत्थर के मंदिर", descEn: "Mild winter sun starts. Explore magnificent stone structures, river boat rides, and heritage architecture.", descHi: "हल्की सर्दियों की शुरुआत। तुंगभद्रा नदी के पास प्राचीन पाषाण वास्तुकला और प्रसिद्ध रथ मंदिरों की सैर करें।", tagEn: "Historic Stone", tagHi: "प्राचीन धरोहर" },
-        { dest: "Kolkata", icon: "🪔", titleEn: "Grand Durga Puja", titleHi: "कोलकाता की भव्य दुर्गा पूजा", descEn: "Witness spectacular artistic pandals, local sweet delicacies, and colorful lights decorated across the city.", descHi: "विशाल कलात्मक पंडालों के दर्शन, बंगाली मिठाइयों का स्वाद और पूरे शहर में जगमगाती रोशनी की धूम।", tagEn: "Culture", tagHi: "भव्य उत्सव" },
-        { dest: "Varanasi", icon: "🪔", titleEn: "Varanasi Ganga Ghats", titleHi: "पवित्र वाराणसी देव दीपावली", descEn: "Crisp pleasant evenings. Experience holy boat rides watching thousands of oil lamps lighting up Varanasi ghats.", descHi: "शाम की पवित्र गंगा आरती, दीपों से जगमगाते घाट और देव दीपावली की विहंगम अलौकिक दृश्य।", tagEn: "Sacred", tagHi: "देव दीपावली" },
-        { dest: "Mysore", icon: "🏰", titleEn: "Mysore Palace Dussehra", titleHi: "मैसूर पैलेस का भव्य दशहरा", descEn: "Witness the magnificent royal palace illuminated with nearly 100,000 lightbulbs and traditional grand parades.", descHi: "लाखों बल्बों की रोशनी से जगमगाता मैसूर का राजसी महल और भव्य पारंपरिक सांस्कृतिक झांकियां।", tagEn: "Royal Parade", tagHi: "शाही दशहरा" }
+        { dest: "Jaipur", icon: "🏵️", titleEn: "Jaipur Festive Markets", titleHi: "जयपुर के रंग-बिरंगे बाज़ार", descEn: "Warm pleasant evenings. Great for local festive shopping, heritage walks, and traditional food courts.", descHi: "सुहावनी शामें। दिवाली की खरीदारी, पुराने महलों की सैर और लजीज पारम्परिक खाने का आनंद लें।" },
+        { dest: "Hampi", icon: "🏛️", titleEn: "Ancient Hampi Ruins", titleHi: "हम्पी के ऐतिहासिक पत्थर के मंदिर", descEn: "Mild winter sun starts. Explore magnificent stone structures, river boat rides, and heritage architecture.", descHi: "हल्की सर्दियों की शुरुआत। तुंगभद्रा नदी के पास प्राचीन पाषाण वास्तुकला और प्रसिद्ध रथ मंदिरों की सैर करें।" },
+        { dest: "Kolkata", icon: "🪔", titleEn: "Grand Durga Puja", titleHi: "कोलकाता की भव्य दुर्गा पूजा", descEn: "Witness spectacular artistic pandals, local sweet delicacies, and colorful lights decorated across the city.", descHi: "विशाल कलात्मक पंडालों के दर्शन, बंगाली मिठाइयों का स्वाद और पूरे शहर में जगमगाती रोशनी की धूम।" },
+        { dest: "Varanasi", icon: "🪔", titleEn: "Varanasi Ganga Ghats", titleHi: "पवित्र वाराणसी देव दीपावली", descEn: "Crisp pleasant evenings. Experience holy boat rides watching thousands of oil lamps lighting up Varanasi ghats.", descHi: "शाम की पवित्र गंगा आरती, दीपों से जगमगाते घाट और देव दीपावली की विहंगम अलौकिक दृश्य।" },
+        { dest: "Mysore", icon: "🏰", titleEn: "Mysore Palace Dussehra", titleHi: "मैसूर पैलेस का भव्य दशहरा", descEn: "Witness the magnificent royal palace illuminated with nearly 100,000 lightbulbs and traditional grand parades.", descHi: "लाखों बल्बों की रोशनी से जगमगाता मैसूर का राजसी महल और भव्य पारंपरिक सांस्कृतिक झांकियां।" }
       ]
     },
     {
@@ -247,11 +247,11 @@ export default function App() {
       monthHi: "नवंबर",
       icon: "🐪",
       places: [
-        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Swiss Tents", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Perfect cold desert nights. Experience camel safaris, stargazing, and traditional puppet folk dances.", descHi: "रेगिस्तान की ठंडी सुहावनी रातें। ऊंत की सवारी, राजस्थानी लोक नृत्य और शानदार लग्जरी स्विस टेंट में रहने का अनुभव।", tagEn: "Starry Nights", tagHi: "सुनहरा रेगिस्तान" },
-        { dest: "Pushkar", icon: "🐫", titleEn: "Pushkar Camel Fair", titleHi: "पुष्कर का पारंपरिक मेला", descEn: "Experience the colorful cultural fair, traditional hot air balloon rides, and peaceful lakeside temple visits.", descHi: "दुनिया का सबसे अनोखा ऊंट मेला, रंग-बिरंगे पारंपरिक खेल, हॉट एयर बैलून राइड और शांत ब्रह्मा मंदिर के दर्शन।", tagEn: "Heritage Fair", tagHi: "पारंपरिक मेला" },
-        { dest: "Amritsar", icon: "🕌", titleEn: "Amritsar Golden Lights", titleHi: "अमृतसर का पावन स्वर्ण मंदिर", descEn: "Pleasant chilly weather. Visit the Golden Temple illuminated with lights, and enjoy delicious hot langar meals.", descHi: "सर्दियों की सुहावनी शुरुआत। रोशनी से नहाया स्वर्ण मंदिर, वाघा बॉर्डर की परेड और लज़ीज़ परांठे व लंगर का स्वाद।", tagEn: "Devotional Lights", tagHi: "पवित्र दर्शन" },
-        { dest: "Varanasi", icon: "🌅", titleEn: "Varanasi Ghat Boat Rides", titleHi: "काशी के कोहरे भरे घाट", descEn: "Pleasant early mornings to feed migratory birds on boat rides and walk around ancient sweet streets.", descHi: "सुबह-सुबह बोटिंग करते हुए प्रवासी पक्षियों को दाना खिलाएं और गरमा-गरम कचौड़ी और जलेबी का स्वाद लें।", tagEn: "Sacred Dawn", tagHi: "पवित्र बनारस" },
-        { dest: "Goa", icon: "🌊", titleEn: "Goa Beach Shacks Reopen", titleHi: "गोवा के नए बीच शैक और बाजार", descEn: "Fabulous beach weather. The famous wooden beach shacks reopen with delicious family dining menus and cool breezes.", descHi: "बहुत ही सुहावना मौसम। समुद्र किनारे लकड़ी के झोपड़ीनुमा रेस्टोरेंट (शैक) ताज़े भोजन और संगीत के साथ खुल जाते हैं।", tagEn: "Beach Vibe", tagHi: "समुद्र तट और धूप" }
+        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Swiss Tents", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Perfect cold desert nights. Experience camel safaris, stargazing, and traditional puppet folk dances.", descHi: "रेगिस्तान की ठंडी सुहावनी रातें। ऊंत की सवारी, राजस्थानी लोक नृत्य और शानदार लग्जरी स्विस टेंट में रहने का अनुभव।" },
+        { dest: "Pushkar", icon: "🐫", titleEn: "Pushkar Camel Fair", titleHi: "पुष्कर का पारंपरिक मेला", descEn: "Experience the colorful cultural fair, traditional hot air balloon rides, and peaceful lakeside temple visits.", descHi: "दुनिया का सबसे अनोखा ऊंट मेला, रंग-बिरंगे पारंपरिक खेल, हॉट एयर बैलून राइड और शांत ब्रह्मा मंदिर के दर्शन।" },
+        { dest: "Amritsar", icon: "🕌", titleEn: "Amritsar Golden Lights", titleHi: "अमृतसर का पावन स्वर्ण मंदिर", descEn: "Pleasant chilly weather. Visit the Golden Temple illuminated with lights, and enjoy delicious hot langar meals.", descHi: "सर्दियों की सुहावनी शुरुआत। रोशनी से नहाया स्वर्ण मंदिर, वाघा बॉर्डर की परेड और लज़ीज़ परांठे व लंगर का स्वाद।" },
+        { dest: "Varanasi", icon: "🌅", titleEn: "Varanasi Ghat Boat Rides", titleHi: "काशी के कोहरे भरे घाट", descEn: "Pleasant early mornings to feed migratory birds on boat rides and walk around ancient sweet streets.", descHi: "सुबह-सुबह बोटिंग करते हुए प्रवासी पक्षियों को दाना खिलाएं और गरमा-गरम कचौड़ी और जलेबी का स्वाद लें।" },
+        { dest: "Goa", icon: "🌊", titleEn: "Goa Beach Shacks Reopen", titleHi: "गोवा के नए बीच शैक और बाजार", descEn: "Fabulous beach weather. The famous wooden beach shacks reopen with delicious family dining menus and cool breezes.", descHi: "बहुत ही सुहावना मौसम। समुद्र किनारे लकड़ी के झोपड़ीनुमा रेस्टोरेंट (शैक) ताज़े भोजन और संगीत के साथ खुल जाते हैं।" }
       ]
     },
     {
@@ -260,11 +260,11 @@ export default function App() {
       monthHi: "दिसंबर",
       icon: "🏖️",
       places: [
-        { dest: "Goa", icon: "🏖️", titleEn: "Goa Beach Sunshine", titleHi: "गोवा विंटर कार्निवल", descEn: "Cool sea breeze and pleasant sunshine. Best for family beach games, watersports, and year-end carnivals.", descHi: "ठंडी समुद्री हवाएं और खिली धूप। बच्चों के साथ सैंड-कैसल बनाने, वाटर स्पोर्ट्स और विंटर कार्निवल का आनंद लें।", tagEn: "Festive Beach", tagHi: "विंटर कार्निवल" },
-        { dest: "Manali", icon: "❄️", titleEn: "Snowy Manali Solang", titleHi: "मनाली के बर्फीले स्की रिज़ॉर्ट", descEn: "Witness heavy snowfall. Enjoy winter ski lessons, snow fights, and premium wooden pine cabins with fireplaces.", descHi: "सफेद बर्फ की मोटी चादर। बच्चों के साथ स्नो-मैन बनाएं, स्कीइंग करें और फायरप्लेस वाले कॉटेज का मज़ा लें।", tagEn: "Winter Snow", tagHi: "बर्फीला स्वर्ग" },
-        { dest: "Auli", icon: "🎿", titleEn: "Auli High Mountain Skiing", titleHi: "औली के बर्फीले मखमली ढलान", descEn: "Breathtaking snow slopes and high peaks. Ride the safe cable car watching dense oak forests loaded with white snow.", descHi: "स्कीइंग के प्रेमियों के लिए बेस्ट। बर्फ से लदे देवदार के जंगलों के बीच रोमांचक केबल कार की सवारी करें।", tagEn: "Ski Resort", tagHi: "बर्फ पर स्कीइंग" },
-        { dest: "Pondicherry", icon: "⛪", titleEn: "French Quarter Walks", titleHi: "पोन्डिचेरी के सुंदर फ्रेंच रास्ते", descEn: "Mild pleasant coastal breezes. Stroll along yellow-painted colonial villas, safe stone beaches, and cozy cafes.", descHi: "हल्की समुद्री हवाएं। फ्रांसीसी वास्तुकला से सजे सुंदर पीले विला, साफ गलियों और सुंदर कैफे की सैर का आनंद लें।", tagEn: "French Vibe", tagHi: "कोलोनियल विलेज" },
-        { dest: "Jaisalmer", icon: "🌌", titleEn: "Desert Winter Stargazing", titleHi: "रेगिस्तान की ठंडी तारों भरी रातें", descEn: "Cozy nights around bonfire. Enjoy Rajasthani puppet shows, camel desert safaris, and clear starry night sky viewing.", descHi: "ठंडी रातों में अलाव के पास बैठकर संगीत का मज़ा लें। दिन में ऊंत की सवारी और रात को दूरबीन से सितारे देखें।", tagEn: "Desert Camp", tagHi: "अलाव और संगीत" }
+        { dest: "Goa", icon: "🏖️", titleEn: "Goa Beach Sunshine", titleHi: "गोवा विंटर कार्निवल", descEn: "Cool sea breeze and pleasant sunshine. Best for family beach games, watersports, and year-end carnivals.", descHi: "ठंडी समुद्री हवाएं और खिली धूप। बच्चों के साथ सैंड-कैसल बनाने, वाटर स्पोर्ट्स और विंटर कार्निवल का आनंद लें।" },
+        { dest: "Manali", icon: "❄️", titleEn: "Snowy Manali Solang", titleHi: "मनाली के बर्फीले स्की रिज़ॉर्ट", descEn: "Witness heavy snowfall. Enjoy winter ski lessons, snow fights, and premium wooden pine cabins with fireplaces.", descHi: "सफेद बर्फ की मोटी चादर। बच्चों के साथ स्नो-मैन बनाएं, स्कीइंग करें और फायरप्लेस वाले कॉटेज का मज़ा लें।" },
+        { dest: "Auli", icon: "🎿", titleEn: "Auli High Mountain Skiing", titleHi: "औली के बर्फीले मखमली ढलान", descEn: "Breathtaking snow slopes and high peaks. Ride the safe cable car watching dense oak forests loaded with white snow.", descHi: "स्कीइंग के प्रेमियों के लिए बेस्ट। बर्फ से लदे देवदार के जंगलों के बीच रोमांचक केबल कार की सवारी करें।" },
+        { dest: "Pondicherry", icon: "⛪", titleEn: "French Quarter Walks", titleHi: "पोन्डिचेरी के सुंदर फ्रेंच रास्ते", descEn: "Mild pleasant coastal breezes. Stroll along yellow-painted colonial villas, safe stone beaches, and cozy cafes.", descHi: "हल्की समुद्री हवाएं। फ्रांसीसी वास्तुकला से सजे सुंदर पीले विला, साफ गलियों और सुंदर कैफे की सैर का आनंद लें।" },
+        { dest: "Jaisalmer", icon: "🌌", titleEn: "Desert Winter Stargazing", titleHi: "रेगिस्तान की ठंडी तारों भरी रातें", descEn: "Cozy nights around bonfire. Enjoy Rajasthani puppet shows, camel desert safaris, and clear starry night sky viewing.", descHi: "ठंडी रातों में अलाव के पास बैठकर संगीत का मज़ा लें। दिन में ऊंत की सवारी और रात को दूरबीन से सितारे देखें।" }
       ]
     }
   ];
@@ -1168,7 +1168,7 @@ export default function App() {
           </div>
           <div className={`border p-6 rounded-2xl text-center flex flex-col items-center transition-all ${darkMode ? 'bg-[#0c0c11] border-zinc-900 shadow-md' : 'bg-white border-zinc-100 shadow-sm'}`}>
             <div className={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-4 ${darkMode ? 'bg-amber-950/40 border border-amber-500/20' : 'bg-amber-50'}`}>📞</div>
-            <h4 className={`text-lg font-bold mb-1 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>{t("9 AM - 7 PM Active Support", "9 AM से 7 PM पक्की सहायता")}</h4>
+            <h4 className={`text-lg font-bold mb-1 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>{t("Support available between 9 - 7", "9 से 7 बजे के बीच सहायता उपलब्ध")}</h4>
             <p className={`text-sm max-w-xs ${darkMode ? 'text-zinc-400' : 'text-zinc-500'}`}>{t("We are available daily from 9:00 AM to 7:00 PM to handle all requests.", "हम आपकी सभी ज़रूरतों और बुकिंग के लिए रोज़ाना सुबह 9:00 बजे से शाम 7:00 बजे तक उपलब्ध हैं।")}</p>
           </div>
         </div>
@@ -1242,9 +1242,6 @@ export default function App() {
                   <div className="flex items-center justify-between mb-3.5">
                     <span className={`text-3xl w-12 h-12 rounded-xl flex items-center justify-center shadow-inner shrink-0 border ${darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-zinc-50 border-zinc-200'}`}>
                       {place.icon}
-                    </span>
-                    <span className={`text-[9px] font-bold border px-2 py-0.5 rounded-full uppercase tracking-wider ${darkMode ? 'text-amber-400 bg-amber-950/40 border-amber-500/30' : 'text-amber-600 bg-amber-50 border-amber-200'}`}>
-                      {language === 'en' ? place.tagEn : place.tagHi}
                     </span>
                   </div>
 
@@ -1380,7 +1377,7 @@ export default function App() {
             <h3 className={`text-3xl md:text-4xl font-serif font-bold mt-3 mb-4 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
               {t("Why Choose StaySaathi?", "हम ही क्यों चुनें?")}
             </h3>
-            <p className={`font-semibold ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
+            <p className={`font-semibold ${darkMode ? 'text-zinc-400' : 'text-zinc-650'}`}>
               {t("We stand beside you as a true friend, ensuring your holidays are entirely stress-free and full of genuine comfort.", "हम एक सच्चे दोस्त की तरह आपके साथ खड़े हैं, ताकि आपका सफर बिना किसी तनाव और पूरी सुख-सुविधाओं के साथ पूरा हो।")}
             </p>
           </div>
@@ -1395,7 +1392,7 @@ export default function App() {
                   {t("Real Humans, No Confusing AI or Bots", "असली इंसानी मदद, कोई उलझाने वाले रोबोट्स नहीं")}
                 </h4>
                 <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-500'}`}>
-                  {t("No automated robotic replies or confusing multi-search websites with fake reviews. Our dedicated destination experts handle your planning and hotel screening headache entirely.", "कोई ऑटोमैटिक रोबोटिक जवाब या उलझाने वाली ढेरों वेबसाइट्स नहीं। आपके सफर की प्लानिंग और होटल्स की बारीक से जांच करने का पूरा सिरदर्द हमारे असली एक्सपर्ट खुद लेते हैं।")}
+                  {t("No automated robotic replies or confusing multi-search websites with fake reviews. Our dedicated destination experts handle your planning and hotel screening headache entirely.", "कोई ऑटोमैटिक रोबोटिक जवाब या उलझाने वाली ढेरों वेबसाइट्स नहीं। आपकी यात्रा की योजना और होटल्स की बारीक से जांच करने का पूरा सिरदर्द हमारे असली विशेषज्ञ खुद लेते हैं।")}
                 </p>
               </div>
             </div>
@@ -1430,21 +1427,27 @@ export default function App() {
         </div>
       </section>
 
-      {/* FAQ Accordion Section */}
+      {/* FAQ Section with Static Layout as Requested */}
       <section className="max-w-4xl mx-auto px-4 md:px-6 py-12 mb-16">
         <h3 className={`text-3xl md:text-4xl font-serif font-bold text-center mb-10 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>{t("Frequently Asked Questions", "अक्सर पूछे जाने वाले सवाल")}</h3>
         <div className="space-y-4">
-          <div className={`p-6 rounded-2xl border shadow-sm transition-all duration-300 ${darkMode ? 'bg-[#0c0c11] border-zinc-900' : 'bg-white border-zinc-200/60'}`}>
-            <strong className="text-base md:text-lg text-amber-500 block font-bold">❓ {t("How does booking payment execution work?", "पेमेंट का भुगतान कैसे होता है?")}</strong>
-            <p className={`mt-2.5 text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("For complete financial safety, you pay directly to the verified chosen hotel property or through their official verified secure payment gateway links.", "पूर्ण वित्तीय सुरक्षा के लिए, आप सभी भुगतानों को सीधे चुने गए होटल को या उनके आधिकारिक सुरक्षित पेमेंट लिंक के माध्यम से ही पूरा करते हैं।")}</p>
+          <div className={`p-5 rounded-2xl border shadow-sm transition-all duration-300 ${darkMode ? 'bg-[#0c0c11] border-zinc-900' : 'bg-white border-zinc-200/60'}`}>
+            <strong className="text-base md:text-lg text-amber-500 font-bold block mb-2">❓ {t("How does booking payment execution work?", "पेमेंट का भुगतान कैसे होता है?")}</strong>
+            <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-650'}`}>
+              {t("For complete financial safety, you pay directly to the verified chosen hotel property or through their official verified secure payment gateway links.", "पूर्ण वित्तीय सुरक्षा के लिए, आप सभी भुगतानों को सीधे चुने गए होटल को या उनके आधिकारिक सुरक्षित पेमेंट लिंक के माध्यम से ही पूरा करते हैं।")}
+            </p>
           </div>
-          <div className={`p-6 rounded-2xl border shadow-sm transition-all duration-300 ${darkMode ? 'bg-[#0c0c11] border-zinc-900' : 'bg-white border-zinc-200/60'}`}>
-            <strong className="text-base md:text-lg text-amber-500 block font-bold">❓ {t("Are there any hidden platform assistance fees?", "क्या इसके लिए कोई छिपी हुई फीस ली जाती है?")}</strong>
-            <p className={`mt-2.5 text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("No, our assistance service is completely free of charge for travelers. We partner directly with property operators to secure customized perks for our community.", "नहीं, हमारी सहायता सेवा यात्रियों के लिए पूरी तरह से निःशुल्क है। हम होटल्स के साथ सीधे जुड़कर आपके लिए खास रियायतें तय करते हैं।")}</p>
+          <div className={`p-5 rounded-2xl border shadow-sm transition-all duration-300 ${darkMode ? 'bg-[#0c0c11] border-zinc-900' : 'bg-white border-zinc-200/60'}`}>
+            <strong className="text-base md:text-lg text-amber-500 font-bold block mb-2">❓ {t("Are there any hidden platform assistance fees?", "क्या इसके लिए कोई छिपी हुई फीस ली जाती है?")}</strong>
+            <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-650'}`}>
+              {t("No, our assistance service is completely free of charge for travelers. We partner directly with property operators to secure customized perks for our community.", "नहीं, हमारी सहायता सेवा यात्रियों के लिए पूरी तरह से निःशुल्क है। हम होटल्स के साथ सीधे जुड़कर आपके लिए खास रियायतें तय करते हैं।")}
+            </p>
           </div>
-          <div className={`p-6 rounded-2xl border shadow-sm transition-all duration-300 ${darkMode ? 'bg-[#0c0c11] border-zinc-900' : 'bg-white border-zinc-200/60'}`}>
-            <strong className="text-base md:text-lg text-amber-500 block font-bold">❓ {t("Can I call and speak to a real person directly?", "क्या मैं सीधे फोन पर बात कर सकता हूँ?")}</strong>
-            <p className={`mt-2.5 text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("Yes! Between 9:00 AM and 7:00 PM daily, you will connect directly with real travel assistant curators on WhatsApp or calls, with no automated robots or complex chatbot loops.", "जी हाँ! रोज सुबह 9 बजे से शाम 7 बजे के बीच आप व्हाट्सएप या कॉल पर सीधे हमारे विशेषज्ञ मार्गदर्शक से बात कर सकते हैं। कोई रोबोटिक या परेशान करने वाले बॉट सिस्टम नहीं हैं।")}</p>
+          <div className={`p-5 rounded-2xl border shadow-sm transition-all duration-300 ${darkMode ? 'bg-[#0c0c11] border-zinc-900' : 'bg-white border-zinc-200/60'}`}>
+            <strong className="text-base md:text-lg text-amber-500 font-bold block mb-2">❓ {t("Can I call and speak to a real person directly?", "क्या मैं सीधे फोन पर बात कर सकता हूँ?")}</strong>
+            <p className={`text-sm leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-650'}`}>
+              {t("Yes! Between 9:00 AM and 7:00 PM daily, you will connect directly with real travel assistant curators on WhatsApp or calls, with no automated robots or complex chatbot loops.", "जी हाँ! रोज सुबह 9 बजे से शाम 7 बजे के बीच आप व्हाट्सएप या कॉल पर सीधे हमारे विशेषज्ञ मार्गदर्शक से बात कर सकते हैं। कोई रोबोटिक या परेशान करने वाले बॉट सिस्टम नहीं हैं।")}
+            </p>
           </div>
         </div>
       </section>
