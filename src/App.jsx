@@ -4,7 +4,7 @@ export default function App() {
   const whatsappNumber = '918826492707';
 
   const [language, setLanguage] = useState('en');
-  const [darkMode, setDarkMode] = useState(false); // Default to clean Light Mode as recommended
+  const [darkMode, setDarkMode] = useState(false); 
   
   const t = (en, hi) => language === 'en' ? en : hi;
 
@@ -45,10 +45,8 @@ export default function App() {
   const [showFloatingSubmit, setShowFloatingSubmit] = useState(false);
   const [showPreferenceReminder, setShowPreferenceReminder] = useState(false);
   
-  // Set default selected month to current month
   const [selectedMonthIndex, setSelectedMonthIndex] = useState(new Date().getMonth());
 
-  // Interactive Checklist tool state
   const [checklistCategory, setChecklistCategory] = useState('mountains');
   const [checkedItems, setCheckedItems] = useState({});
 
@@ -59,7 +57,7 @@ export default function App() {
     adults: 2,
     children: 0,
     childAges: [],
-    budgetPerDay: '8000', 
+    budgetPerDay: '4000', 
     customNotes: '',
   });
 
@@ -68,23 +66,30 @@ export default function App() {
     resort: false,
     homestay: false,
     hostel: false,
-    // Essential Amenities
     parking: false,
     kidsPlay: false,
     pool: false,
     wifi: false,
-    // Room Types
     doubleRoom: false,
     familyRoom: false,
     balcony: false,
     bathtub: false,
     petsAllowed: false,
     bunkBed: false,
-    // Meal Plan selection
     mealPlan: '', 
   });
 
   const [showSuggestions, setShowSuggestions] = useState(false);
+
+  const budgetRanges = {
+    '3000': '₹2,000 - ₹3,000',
+    '4000': '₹3,000 - ₹4,000',
+    '5000': '₹4,000 - ₹5,000',
+    '6000': '₹5,000 - ₹6,000',
+    '8000': '₹6,000 - ₹8,000',
+    '15000': '₹8,000 - ₹15,000',
+    '20000': '₹15,000+'
+  };
 
   const popularSuggestNames = [
     // North India
@@ -122,7 +127,7 @@ export default function App() {
       places: [
         { dest: "Manali", icon: "🏔️", titleEn: "Snowy Manali Escapes", titleHi: "बर्फबारी और मनाली की वादियां", descEn: "Perfect for winter lovers! Enjoy scenic snowfall, skiing, and cozy mountain resort fireplace rooms.", descHi: "सर्दियों के प्रेमियों के लिए! ताज़ा बर्फबारी, स्कीइंग और गर्म आरामदायक रिज़ॉर्ट्स का आनंद लें।" },
         { dest: "Auli", icon: "🎿", titleEn: "Auli Skiing Meadows", titleHi: "औली स्कीइंग और देवदार के जंगल", descEn: "Breathtaking Himalayan snow slopes. Great for scenic cable-car rides with kids.", descHi: "भव्य हिमालयी बर्फ के मैदान। बच्चों के साथ केबल कार की रोमांचक सवारी के लिए सर्वश्रेष्ठ स्थान।" },
-        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Dunes", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Pleasant days for camel safaris, luxury swiss camping under stars, and cultural puppet shows.", descHi: "ऊंत की सवारी, तारों की छांव में लग्जरी स्विस कैंपिंग और सांस्कृतिक कठपुतली शो के लिए सुखद दिन।" },
+        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Dunes", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Pleasant days for camel safaris, luxury swiss camping under stars, and cultural puppet shows.", descHi: "ऊंट की सवारी, तारों की छांव में लग्जरी स्विस कैंपिंग और सांस्कृतिक कठपुतली शो के लिए सुखद दिन।" },
         { dest: "Gulmarg", icon: "❄️", titleEn: "Gulmarg Snow Slopes", titleHi: "गुलमर्ग के बर्फीले पहाड़", descEn: "Stunning snow meadows and the famous Gondola cable car ride over pine trees.", descHi: "शानदार बर्फ के मैदान और देवदार के पेड़ों के ऊपर प्रसिद्ध गोंडोला केबल कार की सवारी।" },
         { dest: "Jaipur", icon: "🏰", titleEn: "Pleasant Pink City", titleHi: "जयपुर की गुलाबी रंगत", descEn: "Warm daytime sun perfect for visiting the magnificent Amber Fort and local bazaars.", descHi: "शानदार आमेर किले और स्थानीय बाजारों का दौरा करने के लिए दिन की सुखद गुनगुनी धूप।" }
       ]
@@ -250,7 +255,7 @@ export default function App() {
       monthHi: "नवंबर",
       icon: "🐪",
       places: [
-        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Swiss Tents", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Perfect cold desert nights. Experience camel safaris, stargazing, and traditional puppet folk dances.", descHi: "रेगिस्तान की ठंडी सुहावनी रातें। ऊंट की सवारी, राजस्थानी लोक नृत्य और शानदार लग्जरी स्विस टेंट में रहने का अनुभव।" },
+        { dest: "Jaisalmer", icon: "🐪", titleEn: "Golden Desert Swiss Tents", titleHi: "जैसलमेर का सुनहरा रेगिस्तानी कैंप", descEn: "Perfect cold desert nights. Experience camel safaris, stargazing, and traditional puppet folk dances.", descHi: "रेगिस्तान की ठंडी सुहावनी रातें। ऊंट की सवारी, राजस्थानी लोक नृत्य और शानदार लग्जरी स्विस टent में रहने का अनुभव।" },
         { dest: "Pushkar", icon: "🐫", titleEn: "Pushkar Camel Fair", titleHi: "पुष्कर का पारंपरिक मेला", descEn: "Experience the colorful cultural fair, traditional hot air balloon rides, and peaceful lakeside temple visits.", descHi: "दुनिया का सबसे अनोखा ऊंट मेला, रंग-बिरंगे पारंपरिक खेल, हॉट एयर बैलून राइड और शांत ब्रह्मा मंदिर के दर्शन।" },
         { dest: "Amritsar", icon: "🕌", titleEn: "Amritsar Golden Lights", titleHi: "अमृतसर का पावन स्वर्ण मंदिर", descEn: "Pleasant chilly weather. Visit the Golden Temple illuminated with lights, and enjoy delicious hot langar meals.", descHi: "सर्दियों की सुहावनी शुरुआत। रोशनी से नहाया स्वर्ण मंदिर, वाघा बॉर्डर की परेड और लज़ीज़ परांठे व लंगर का स्वाद।" },
         { dest: "Varanasi", icon: "🪔", titleEn: "Varanasi Ganga Dev Deepawali", titleHi: "वाराणसी की देव दीपावली", descEn: "Watch all Ganges ghats lit up with millions of clay lamps under crisp chilly winter winds.", descHi: "ठंडी सर्दियों की हवा के बीच लाखों मिट्टी के दीयों से जगमगाते गंगा के सभी घाटों का अलौकिक दृश्य देखें।" },
@@ -341,24 +346,20 @@ export default function App() {
       setCurrentImage((prev) => (prev + 1) % luxuryImages.length);
     }, 4500);
     return () => clearInterval(bgTimer);
-  }, []);
+  }, [luxuryImages.length]);
 
   useEffect(() => {
     const handleScroll = () => {
       const formSection = document.getElementById('booking-form');
       const staticSubmitButton = document.getElementById('static-submit-btn');
       
-      if (formSection) {
+      if (formSection && staticSubmitButton) {
         const formRect = formSection.getBoundingClientRect();
         const isInFormScope = formRect.top < window.innerHeight && formRect.bottom > 150;
         
-        if (isInFormScope && staticSubmitButton) {
-          const btnRect = staticSubmitButton.getBoundingClientRect();
-          const isStaticBtnVisible = btnRect.top < window.innerHeight && btnRect.bottom > 0;
-          setShowFloatingSubmit(!isStaticBtnVisible);
-        } else {
-          setShowFloatingSubmit(false);
-        }
+        const btnRect = staticSubmitButton.getBoundingClientRect();
+        const isStaticBtnVisible = btnRect.top < window.innerHeight && btnRect.bottom > 0;
+        setShowFloatingSubmit(isInFormScope && !isStaticBtnVisible);
       } else {
         setShowFloatingSubmit(false);
       }
@@ -503,9 +504,8 @@ export default function App() {
       ? `\n📝 *Special Requests:* ${form.customNotes.trim()}` 
       : '';
 
-    const budgetFormatted = form.budgetPerDay === '20000' ? '₹15,000+' : `₹${form.budgetPerDay}`;
+    const budgetFormatted = budgetRanges[form.budgetPerDay] || `₹${form.budgetPerDay}`;
 
-    // Formatting highly structured code data for B2B parsing efficiency
     const msg = `*STAYSAATHI TRIP INQUIRY*\n` +
       `=========================\n` +
       `📍 DESTINATION : ${form.destination}\n` +
@@ -593,7 +593,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* HERO HERO SECTION */}
+      {/* HERO SECTION */}
       <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <img
           src={luxuryImages[currentImage]}
@@ -654,7 +654,7 @@ export default function App() {
                   onBlur={() => {
                     setTimeout(() => setShowSuggestions(false), 200);
                   }}
-                  placeholder={t("Destination (e.g. Manali, Goa, Rishikesh, Jaipur)", "गंतव्य (जैसे: मनाली, गोवा, ऋषिकेश, जयपुर)")}
+                  placeholder={t("Destination (e.g. Manali, Goa, Rishikesh, Jaipur)", "गंतव्य (जैसे: मनाली, गोवा, ऋषिकेश, Jaipur)")}
                   className={`w-full border-2 focus:outline-none focus:ring-4 rounded-xl p-3.5 text-base transition-all ${
                     validationError 
                       ? 'border-red-400 focus:ring-red-100 focus:border-red-500' 
@@ -714,7 +714,7 @@ export default function App() {
               {/* Adults & Kids count */}
               <div className="grid grid-cols-2 gap-4 mb-5">
                 <div>
-                  <label className={`block text-sm font-semibold mb-1.5 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("Adults (12+ yrs)", "वयस्क")}</label>
+                  <label className={`block text-sm font-semibold mb-1.5 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("Adults (12+ yrs)", "वयस्क (12+ साल)")}</label>
                   <select 
                     value={form.adults} 
                     onChange={(e) => handleAdultsChildren('adults', e.target.value)} 
@@ -725,7 +725,7 @@ export default function App() {
                 </div>
 
                 <div>
-                  <label className={`block text-sm font-semibold mb-1.5 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("Children (0-12 yrs)", "बच्चे")}</label>
+                  <label className={`block text-sm font-semibold mb-1.5 ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>{t("Children (0-12 yrs)", "बच्चे (0-12 साल)")}</label>
                   <select 
                     value={form.children} 
                     onChange={(e) => handleAdultsChildren('children', e.target.value)} 
@@ -745,9 +745,12 @@ export default function App() {
                   onChange={handleChange} 
                   className={`w-full border-2 focus:outline-none rounded-xl p-3.5 text-zinc-700 transition-colors duration-200 ${darkMode ? 'bg-[#07070a] text-zinc-300 border-zinc-800 focus:border-amber-500' : 'bg-white text-zinc-800 border-zinc-200 focus:border-amber-500'}`}
                 >
-                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="4000">₹2,000 - ₹4,000 ({t("Budget Standard", "बजट होटल")})</option>
-                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="8000">₹4,000 - ₹8,000 ({t("Family Standard Premium", "प्रीमियम फैमिली स्टे")})</option>
-                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="12000">₹8,000 - ₹15,000 ({t("Luxury Resort", "शानदार लग्जरी रिसॉर्ट")})</option>
+                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="3000">₹2,000 - ₹3,000 ({t("Budget Saver", "सस्ता बजट")})</option>
+                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="4000">₹3,000 - ₹4,000 ({t("Budget Standard", "बजट होटल")})</option>
+                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="5000">₹4,000 - ₹5,000 ({t("Standard Premium", "स्टैंडर्ड प्रीमियम")})</option>
+                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="6000">₹5,000 - ₹6,000 ({t("Family Premium", "फैमिली प्रीमियम")})</option>
+                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="8000">₹6,000 - ₹8,000 ({t("Premium Plus", "प्रीमियम प्लस")})</option>
+                  <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="15000">₹8,000 - ₹15,000 ({t("Luxury Resort", "शानदार लग्जरी रिसॉर्ट")})</option>
                   <option className={darkMode ? 'bg-zinc-950 text-zinc-200' : 'bg-white text-zinc-800'} value="20000">₹15,000+ ({t("Ultra-Luxury/Villas", "अति-लग्जरी पैलेस / विला")})</option>
                 </select>
               </div>
@@ -770,7 +773,7 @@ export default function App() {
                 </div>
               )}
 
-              {/* Special Request Area - clean solid font colors */}
+              {/* Special Request Area */}
               <div className="mb-6">
                 <label className={`block text-sm font-semibold mb-1.5 ${darkMode ? 'text-zinc-400' : 'text-black font-bold'}`}>
                   📝 {t("Any Special Requests / Custom Notes?", "विशेष अनुरोध / टिप्पणी")}
@@ -780,7 +783,6 @@ export default function App() {
                   value={form.customNotes}
                   onChange={handleChange}
                   rows="3"
-                  placeholder=""
                   className={`w-full border-2 focus:ring-4 rounded-xl p-3 text-sm focus:outline-none resize-none transition-colors duration-200 ${darkMode ? 'bg-[#07070a] text-white border-zinc-800 focus:border-amber-500 focus:ring-amber-500/10' : 'bg-white text-black border-zinc-300 focus:border-amber-500 focus:ring-amber-100'}`}
                 />
               </div>
@@ -1136,7 +1138,7 @@ export default function App() {
                     <br />
                     👨‍👩‍👧 GUESTS      : {form.adults} Adults, {form.children > 0 ? `${form.children} Children` : 'No Kids'}
                     <br />
-                    💰 BUDGET/NIGHT: {form.budgetPerDay === '20000' ? '15000+' : `₹${form.budgetPerDay}`} / day
+                    💰 BUDGET/NIGHT: {budgetRanges[form.budgetPerDay] || `₹${form.budgetPerDay}`} / day
                     {(() => {
                       const selectedPrefs = [
                         filters.hotel && "Hotel",
@@ -1235,7 +1237,106 @@ export default function App() {
         </div>
       </section>
 
-      {/* RESTORED SECTION: Vetted Specially for Indian Families - moved above Packing Assistant */}
+      {/* SEASONAL RECON SERVICES SECTION */}
+      <section className="max-w-7xl mx-auto px-4 md:px-6 mb-24">
+        <div className={`rounded-3xl border p-6 md:p-10 transition-all ${darkMode ? 'bg-[#0c0c11] border-zinc-900/80 shadow-xl' : 'bg-zinc-100/80 border-zinc-200/60'}`}>
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <span className="text-4xl block mb-2">📅</span>
+            <h3 className={`text-2xl md:text-3xl font-serif font-bold mt-2 mb-3 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+              {t("Where to Go in Which Season? (Destination Suggestions)", "मौसम के अनुसार यात्रा सुझाव")}
+            </h3>
+            <p className={`text-sm font-semibold ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
+              {t("Don't let bad weather ruin your trip. Select a month below to find perfect family destination suggestions recommended by Indian travel experts.", "गलत मौसम में यात्रा करके परेशान न हों। नीचे कोई भी महीना चुनें और जानें उस समय परिवार के लिए कौन से स्थान सबसे बेस्ट सुझाव रहेंगे।")}
+            </p>
+          </div>
+
+          {/* Month grid selector */}
+          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-12 gap-2 mb-8">
+            {seasonalGuide.map((item, idx) => {
+              const isActive = selectedMonthIndex === idx;
+              return (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedMonthIndex(idx)}
+                  className={`py-3 px-2 rounded-xl border font-bold text-xs flex flex-col items-center gap-1.5 transition-all duration-250 ${
+                    isActive 
+                      ? 'bg-amber-500 border-amber-600 text-white shadow-md scale-105' 
+                      : darkMode
+                        ? 'bg-[#07070a] border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:bg-zinc-900 hover:text-white'
+                        : 'bg-white border-zinc-200 text-zinc-700 hover:border-zinc-300 hover:bg-zinc-50'
+                  }`}
+                >
+                  <span className="text-lg">{item.icon}</span>
+                  <span>{language === 'en' ? item.monthEn : item.monthHi}</span>
+                </button>
+              );
+            })}
+          </div>
+
+          <div className={`mb-6 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4 border-b pb-4 transition-colors ${darkMode ? 'border-zinc-800' : 'border-zinc-200'}`}>
+            <div>
+              <span className={`text-xs font-bold tracking-wider uppercase border px-3 py-1 rounded-full ${darkMode ? 'text-amber-400 bg-amber-950/40 border-amber-500/20' : 'text-amber-600 bg-amber-50 border-amber-200'}`}>
+                📅 {t("RECOMMENDED SUGGESTIONS FOR", "इस महीने के लिए सर्वश्रेष्ठ सुझाव")}: {language === 'en' ? seasonalGuide[selectedMonthIndex].monthEn : seasonalGuide[selectedMonthIndex].monthHi}
+              </span>
+              <h4 className={`text-xl md:text-2xl font-serif font-bold mt-3 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+                {t("Curated Destination Suggestions", "चुनिंदा पर्यटन स्थल सुझाव")}
+              </h4>
+            </div>
+            <p className={`text-xs font-semibold max-w-sm md:text-right leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-550'}`}>
+              {t("Click on any destination's Apply button to instantly load it into your travel planner.", "नीचे दी गई किसी भी जगह के 'चुनें' बटन पर क्लिक करके सीधे योजना बनाना शुरू करें।")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-4">
+            {seasonalGuide[selectedMonthIndex].places.map((place, idx) => (
+              <div 
+                key={idx} 
+                className={`w-full rounded-2xl border p-5 shadow-sm hover:shadow-md transition-all duration-305 flex flex-col justify-between group ${
+                  darkMode 
+                    ? 'bg-[#07070a] border-zinc-800/80 hover:border-amber-500/50' 
+                    : 'bg-white border-zinc-200/60 hover:border-amber-500/50'
+                }`}
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className={`text-2xl w-10 h-10 rounded-xl flex items-center justify-center shadow-inner border shrink-0 ${
+                      darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-zinc-50 border-zinc-200'
+                    }`}>
+                      {place.icon}
+                    </span>
+                    <div>
+                      <h5 className={`text-sm font-bold leading-tight ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
+                        {place.dest}
+                      </h5>
+                      <span className="text-[10px] font-semibold text-amber-500 block">
+                        {language === 'en' ? place.titleEn : place.titleHi}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <p className={`text-xs leading-relaxed mb-4 line-clamp-3 ${darkMode ? 'text-zinc-400' : 'text-zinc-550'}`}>
+                    {language === 'en' ? place.descEn : place.descHi}
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => handleAutofillSeason(place.dest)}
+                  className={`w-full py-2 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 border mt-auto ${
+                    darkMode 
+                      ? 'bg-zinc-900 text-zinc-100 border-zinc-800 hover:bg-amber-500 hover:text-zinc-950 active:scale-95' 
+                      : 'bg-zinc-900 text-white border-zinc-700 hover:bg-amber-500 hover:text-zinc-950 active:scale-95'
+                  }`}
+                >
+                  📍 {t("Plan This Spot", "इसे चुनें")}
+                </button>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* RESTORED SECTION: Vetted Specially for Indian Families */}
       <section className="max-w-7xl mx-auto px-4 md:px-6 mb-24">
         <div className={`rounded-3xl border p-8 md:p-12 transition-all ${darkMode ? 'bg-amber-950/20 border-amber-900/40' : 'bg-amber-50/60 border-amber-200/50'}`}>
           <div className="text-center max-w-2xl mx-auto mb-10 md:mb-14">
@@ -1360,106 +1461,6 @@ export default function App() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* SEASONAL RECON SERVICES SECTION */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 mb-24">
-        <div className={`rounded-3xl border p-6 md:p-10 transition-all ${darkMode ? 'bg-[#0c0c11] border-zinc-900/80 shadow-xl' : 'bg-zinc-100/80 border-zinc-200/60'}`}>
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-4xl block mb-2">📅</span>
-            <h3 className={`text-2xl md:text-3xl font-serif font-bold mt-2 mb-3 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
-              {t("Where to Go in Which Season? (Destination Suggestions)", "मौसम के अनुसार यात्रा सुझाव")}
-            </h3>
-            <p className={`text-sm font-semibold ${darkMode ? 'text-zinc-400' : 'text-zinc-600'}`}>
-              {t("Don't let bad weather ruin your trip. Select a month below to find perfect family destination suggestions recommended by Indian travel experts.", "गलत मौसम में यात्रा करके परेशान न हों। नीचे कोई भी महीना चुनें और जानें उस समय परिवार के लिए कौन से स्थान सबसे बेस्ट सुझाव रहेंगे।")}
-            </p>
-          </div>
-
-          {/* Month grid selector */}
-          <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-12 gap-2 mb-8">
-            {seasonalGuide.map((item, idx) => {
-              const isActive = selectedMonthIndex === idx;
-              return (
-                <button
-                  key={idx}
-                  onClick={() => setSelectedMonthIndex(idx)}
-                  className={`py-3 px-2 rounded-xl border font-bold text-xs flex flex-col items-center gap-1.5 transition-all duration-250 ${
-                    isActive 
-                      ? 'bg-amber-500 border-amber-600 text-white shadow-md scale-105' 
-                      : darkMode
-                        ? 'bg-[#07070a] border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:bg-zinc-900 hover:text-white'
-                        : 'bg-white border-zinc-200 text-zinc-700 hover:border-zinc-300 hover:bg-zinc-50'
-                  }`}
-                >
-                  <span className="text-lg">{item.icon}</span>
-                  <span>{language === 'en' ? item.monthEn : item.monthHi}</span>
-                </button>
-              );
-            })}
-          </div>
-
-          <div className={`mb-6 text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-4 border-b pb-4 transition-colors ${darkMode ? 'border-zinc-800' : 'border-zinc-200'}`}>
-            <div>
-              <span className={`text-xs font-bold tracking-wider uppercase border px-3 py-1 rounded-full ${darkMode ? 'text-amber-400 bg-amber-950/40 border-amber-500/20' : 'text-amber-600 bg-amber-50 border-amber-200'}`}>
-                📅 {t("RECOMMENDED SUGGESTIONS FOR", "इस महीने के लिए सर्वश्रेष्ठ सुझाव")}: {language === 'en' ? seasonalGuide[selectedMonthIndex].monthEn : seasonalGuide[selectedMonthIndex].monthHi}
-              </span>
-              <h4 className={`text-xl md:text-2xl font-serif font-bold mt-3 ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
-                {t("Curated Destination Suggestions", "चुनिंदा पर्यटन स्थल सुझाव")}
-              </h4>
-            </div>
-            <p className={`text-xs font-semibold max-w-sm md:text-right leading-relaxed ${darkMode ? 'text-zinc-400' : 'text-zinc-550'}`}>
-              {t("Click on any destination's Apply button to instantly load it into your travel planner.", "नीचे दी गई किसी भी जगह के 'चुनें' बटन पर क्लिक करके सीधे योजना बनाना शुरू करें।")}
-            </p>
-          </div>
-
-          {}
-          <div className="flex flex-row overflow-x-auto gap-4 pb-4 snap-x snap-mandatory scrollbar-thin">
-            {seasonalGuide[selectedMonthIndex].places.map((place, idx) => (
-              <div 
-                key={idx} 
-                className={`w-[290px] sm:w-[320px] shrink-0 snap-start rounded-2xl border p-5 shadow-sm hover:shadow-md transition-all duration-305 flex flex-col justify-between group ${
-                  darkMode 
-                    ? 'bg-[#07070a] border-zinc-800/80 hover:border-amber-500/50' 
-                    : 'bg-white border-zinc-200/60 hover:border-amber-500/50'
-                }`}
-              >
-                <div>
-                  <div className="flex items-center gap-3 mb-3">
-                    <span className={`text-2xl w-10 h-10 rounded-xl flex items-center justify-center shadow-inner border shrink-0 ${
-                      darkMode ? 'bg-zinc-900 border-zinc-800' : 'bg-zinc-50 border-zinc-200'
-                    }`}>
-                      {place.icon}
-                    </span>
-                    <div>
-                      <h5 className={`text-sm font-bold leading-tight ${darkMode ? 'text-white' : 'text-zinc-800'}`}>
-                        {place.dest}
-                      </h5>
-                      <span className="text-[10px] font-semibold text-amber-500 block">
-                        {language === 'en' ? place.titleEn : place.titleHi}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <p className={`text-xs leading-relaxed mb-4 line-clamp-3 ${darkMode ? 'text-zinc-400' : 'text-zinc-550'}`}>
-                    {language === 'en' ? place.descEn : place.descHi}
-                  </p>
-                </div>
-
-                <button
-                  onClick={() => handleAutofillSeason(place.dest)}
-                  className={`w-full py-2 px-4 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 border mt-auto ${
-                    darkMode 
-                      ? 'bg-zinc-900 text-zinc-100 border-zinc-800 hover:bg-amber-500 hover:text-zinc-950 active:scale-95' 
-                      : 'bg-zinc-900 text-white border-zinc-700 hover:bg-amber-500 hover:text-zinc-950 active:scale-95'
-                  }`}
-                >
-                  📍 {t("Plan This Spot", "इसे चुनें")}
-                </button>
-              </div>
-            ))}
-          </div>
-
         </div>
       </section>
 
@@ -1705,7 +1706,7 @@ export default function App() {
               <p className={`text-sm leading-relaxed mb-6 font-medium ${darkMode ? 'text-zinc-400' : 'text-zinc-550'}`}>
                 {t(
                   "You haven't selected any stay type, essential amenities, or meal plans yet. Adding these details helps our experts find the absolute perfect, family-safe match for your budget!",
-                  "आपने अभी तक रहने का प्रकार, आवश्यक सुविधाएं या भोजन की पसंद नहीं चुनी है। इन्हें जोड़ने से हमारे विशेषज्ञ आपके बजट में सबसे उत्तम और सुरक्षित होटल ढूंढ पाएंगे!"
+                  "आपने अभी तक रहने का प्रकार, आवश्यक सुविधाएं या भोजन की पसंद नहीं चुनी है। इन्हें जोड़ने से हमारे विशेषज्ञ आपके बजट में सबसे उत्तम और सुरक्षित होटल ढूंढ पाएंगे!"
                 )}
               </p>
             </div>
@@ -1737,7 +1738,7 @@ export default function App() {
                     : 'bg-zinc-100 hover:bg-zinc-200 text-zinc-700 border-zinc-200'
                 }`}
               >
-                {t("Proceed Anyways / वैसे ही आगे बढ़ें", "वैसे ही आगे बढ़ें")} →
+                {t("Proceed Anyways", "वैसे ही आगे बढ़ें")} →
               </button>
             </div>
             
