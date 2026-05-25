@@ -548,7 +548,7 @@ export default function App() {
             <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-yellow-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl shadow-md shadow-amber-500/20">A</div>
             <div>
               <h1 className={`text-2xl md:text-3xl font-serif tracking-tight font-bold ${darkMode ? 'text-white' : 'text-zinc-800'}`}>Atithio</h1>
-              <p className="text-xs text-amber-600 font-semibold tracking-wider -mt-0.5">{t("Book as a friend", "दोस्त की तरह बुक करें")}</p>
+              <p className="text-xs text-amber-600 font-semibold tracking-wider -mt-0.5">{t("Skip the search. Skip the bots. Just a great stay", "खोज छोड़िए, झंझट छोड़िए, बस शानदार ठहराव का आनंद लीजिए।")}</p>
             </div>
           </div>
 
